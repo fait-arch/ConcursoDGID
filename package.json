@@ -1,0 +1,28 @@
+{
+  "name": "concurso-pulsadores",
+  "version": "1.0.0",
+  "description": "Concurso de preguntas para dos equipos con pulsadores, para proyectar en pantalla grande",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@fontsource-variable/google-sans-flex": "^5.3.2",
+    "@fontsource-variable/material-symbols-rounded": "^5.3.9",
+    "@material/material-color-utilities": "^0.3.0",
+    "canvas-confetti": "^1.9.4",
+    "next": "^16.4.3",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1"
+  },
+  "devDependencies": {
+    "@types/canvas-confetti": "^1.9.0",
+    "@types/node": "^26.6.5",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "typescript": "^5.9.3"
+  },
+  "private": true
+}

@@ -1,0 +1,998 @@
+{
+  "titulo": "Gran Concurso de Saberes",
+  "configuracion": {
+    "tiempoPulsar": 20,
+    "tiempoResponder": 10,
+    "puntos": 100,
+    "puntosMinimos": 0.5,
+    "factorRebote": 1,
+    "mezclar": false
+  },
+  "equipos": [
+    { "nombre": "Equipo Coral", "color": "#FF5A4A", "tecla": "A" },
+    { "nombre": "Equipo Azul", "color": "#3F8CFF", "tecla": "L" }
+  ],
+  "preguntas": [
+    {
+      "categoria": "Fondos concursables internos",
+      "pregunta": "Situación: Tu proyecto de fondos concursables internos fue aprobado y necesitas recursos para ejecutar una actividad. ¿Qué debes hacer?",
+      "opciones": [
+        "Remitir a la DGI un memorándum de requerimiento firmado, indicando la modalidad de financiamiento.",
+        "Comprar directamente y luego avisar a Finanzas.",
+        "Solicitar el dinero directamente a Contraloría."
+      ],
+      "correcta": "A"
+    },
+    {
+      "categoria": "Fondos concursables internos",
+      "pregunta": "Situación: Estás ejecutando tu proyecto y debes reportar actividades, avances y novedades. ¿Qué anexo corresponde?",
+      "opciones": [
+        "Anexo A – Carta de postulación y privacidad.",
+        "Anexo D – Monitoreo.",
+        "Anexo E – Cierre."
+      ],
+      "correcta": "B"
+    },
+    {
+      "categoria": "Fondos concursables internos",
+      "pregunta": "Situación: Realizaste un gasto autorizado bajo la modalidad de reembolso. ¿Cómo debes justificarlo?",
+      "opciones": [
+        "Presentar únicamente el valor gastado mediante correo.",
+        "Esperar hasta el cierre del proyecto para presentar los comprobantes.",
+        "Enviar a la DGI el formato de justificación, el memorándum de cumplimiento de la actividad y los comprobantes requeridos, dentro de los 30 días posteriores al gasto."
+      ],
+      "correcta": "C"
+    },
+    {
+      "categoria": "Fondos concursables internos",
+      "pregunta": "Situación: La DGI te solicita realizar el monitoreo de tu proyecto. ¿Qué debes hacer?",
+      "opciones": [
+        "Completar el Anexo D con los avances, novedades, resultados y evidencias del proyecto, y cargarlo en el apartado de Monitoreo de Proyectos Registrados.",
+        "Presentar solamente el presupuesto inicial.",
+        "Esperar hasta que termine el proyecto para informar sus avances."
+      ],
+      "correcta": "A"
+    },
+    {
+      "categoria": "Fondos concursables internos",
+      "pregunta": "Situación: Necesitas contratar a un ayudante bajo servicios profesionales de investigación para ejecutar actividades de tu proyecto con fondos concursables internos. ¿Qué debes hacer?",
+      "opciones": [
+        "Contratarlo directamente sin autorización.",
+        "Presentar la solicitud a la DGI para que gestione la contratación.",
+        "Solicitarlo únicamente a Finanzas."
+      ],
+      "correcta": "B"
+    },
+    {
+      "categoria": "Fondos concursables internos",
+      "pregunta": "Situación: Necesitas conocer cuánto presupuesto disponible le queda a tu proyecto. ¿Cómo lo calculas?",
+      "opciones": [
+        "Sumando los gastos al presupuesto aprobado.",
+        "Consultando solamente el último gasto.",
+        "Restando los gastos realizados del presupuesto total asignado."
+      ],
+      "correcta": "C"
+    },
+    {
+      "categoria": "Fondos concursables internos",
+      "pregunta": "Situación: Quieres incorporar a un nuevo investigador a tu proyecto de fondos concursables internos. ¿Qué corresponde hacer?",
+      "opciones": [
+        "Enviar memo de notificación, copia de cedula y anexo A firmado.",
+        "Añadirlo sin comunicar el cambio.",
+        "Esperar hasta presentar el cierre del proyecto."
+      ],
+      "correcta": "A"
+    },
+    {
+      "categoria": "Fondos concursables internos",
+      "pregunta": "Situación: Finalizaste un proyecto interno con financiamiento. ¿Qué debes presentar para cerrar el proyecto?",
+      "opciones": [
+        "Solamente un correo de finalización.",
+        "El Anexo E completo, evidencias de actividades y resultados, productos generados e información final de ejecución presupuestaria.",
+        "Únicamente las facturas de las actividades."
+      ],
+      "correcta": "B"
+    },
+    {
+      "categoria": "Fondos concursables internos",
+      "pregunta": "Situación: Eres Investigador Principal de un proyecto con fondos concursables internos y realizaste una compra autorizada. ¿A nombre de quién deben emitirse las facturas para justificar el gasto?",
+      "opciones": [
+        "A nombre de cualquier integrante del equipo de investigación.",
+        "A nombre del proveedor que realizó la venta.",
+        "A nombre del Investigador Principal, incluyendo los datos correspondientes."
+      ],
+      "correcta": "C"
+    },
+    {
+      "categoria": "Fondos concursables internos",
+      "pregunta": "Situación: Durante la ejecución de tu proyecto surge un nuevo gasto que no estaba contemplado en el presupuesto inicial. ¿Qué debes hacer para cubrirlo?",
+      "opciones": [
+        "Redistribuir los fondos, renunciando a otros rubros previamente contemplados, y gestionar la modificación correspondiente.",
+        "Realizar el gasto directamente y justificarlo después.",
+        "Solicitar un incremento automático del presupuesto."
+      ],
+      "correcta": "A"
+    },
+    {
+      "categoria": "Fondos concursables internos",
+      "pregunta": "Situación: Eres Investigador Principal y estás elaborando el presupuesto para presentar una propuesta de investigación a una convocatoria de fondos concursables internos. ¿Qué información debes incluir?",
+      "opciones": [
+        "Únicamente el valor total solicitado para el proyecto.",
+        "Las actividades planificadas y los gastos estimados para la ejecución del proyecto.",
+        "Solamente los gastos de contratación de personal."
+      ],
+      "correcta": "B"
+    },
+    {
+      "categoria": "Fondos concursables internos",
+      "pregunta": "Situación: Tu proyecto requiere realizar actividades de campo o participar en conferencias dentro del territorio nacional y necesitas incluir gastos de alimentación para los participantes autorizados. ¿Cuál es el monto máximo diario permitido para alimentación nacional?",
+      "opciones": [
+        "Hasta USD 80 diarios, incluido IVA.",
+        "Hasta USD 50 diarios, incluido IVA.",
+        "Hasta USD 25 diarios, incluido IVA."
+      ],
+      "correcta": "C"
+    },
+    {
+      "categoria": "Fondos concursables internos",
+      "pregunta": "Situación: Debes viajar a otra ciudad del Ecuador para desarrollar actividades de investigación de tu proyecto. ¿Cuál es el monto máximo diario autorizado para hospedaje nacional?",
+      "opciones": [
+        "USD 80 diarios, incluido IVA.",
+        "USD 100 diarios, incluido IVA.",
+        "USD 50 diarios, incluido IVA."
+      ],
+      "correcta": "A"
+    },
+    {
+      "categoria": "Fondos concursables internos",
+      "pregunta": "Situación: Durante la ejecución de tu proyecto necesitas realizar un gasto adicional que no está incluido en el presupuesto aprobado. ¿Qué sucede si presentas directamente un requerimiento para ese gasto?",
+      "opciones": [
+        "La DGI lo aprueba automáticamente.",
+        "La DGI rechaza el gasto porque no consta en el presupuesto aprobado.",
+        "Finanzas incrementa automáticamente el presupuesto del proyecto."
+      ],
+      "correcta": "B"
+    },
+    {
+      "categoria": "Fondos concursables internos",
+      "pregunta": "Situación: Tu proyecto tiene presupuestado adquirir materiales, insumos técnicos y recursos necesarios para la investigación. ¿A quién pertenecen los bienes adquiridos?",
+      "opciones": [
+        "A los integrantes del equipo que utilizaron los materiales.",
+        "Exclusivamente al Investigador Principal.",
+        "A la UIDE y puede ser utilizados por otros investigadores."
+      ],
+      "correcta": "C"
+    },
+    {
+      "categoria": "Fondos concursables internos",
+      "pregunta": "Situación: Tu proyecto necesita adquirir un software especializado para desarrollar sus actividades de investigación. ¿Qué debes hacer antes de realizar la compra?",
+      "opciones": [
+        "Obtener la autorización previa de la Dirección General de Investigación, que gestiona el proceso con las unidades correspondientes.",
+        "Solicitar al proveedor que facture a nombre del investigador.",
+        "Comprar directamente el software y posteriormente informar a la DGI."
+      ],
+      "correcta": "A"
+    },
+    {
+      "categoria": "Fondos concursables internos",
+      "pregunta": "Situación: Tu proyecto de fondos concursables internos fue aprobado y necesitas solicitar la compra de boletos aéreos para realizar actividades de investigación. ¿Con cuánta anticipación debes gestionar el requerimiento de vuelos aéreos?",
+      "opciones": [
+        "El mismo día del viaje.",
+        "Con al menos 15 días de anticipación a la fecha del viaje.",
+        "Después de realizar el viaje."
+      ],
+      "correcta": "B"
+    },
+    {
+      "categoria": "Fondos concursables internos",
+      "pregunta": "Situación: Realizaste un gasto autorizado en tu proyecto de investigación y necesitas solicitar el reembolso correspondiente. ¿Cuál de los siguientes comprobantes no es aceptado para justificar el gasto mediante reembolso?",
+      "opciones": [
+        "Una factura válida que cumple los requisitos tributarios y del procedimiento institucional.",
+        "Una factura electrónica con los datos del Investigador Principal y los requisitos correspondientes.",
+        "Una factura emitida a consumidor final."
+      ],
+      "correcta": "C"
+    },
+    {
+      "categoria": "Fondos concursables internos",
+      "pregunta": "Situación: Realizaste un gasto de tu proyecto y recibiste el bien o servicio correspondiente. Sin embargo, entregaste la factura para solicitar el reembolso cuando habían transcurrido más de 60 días. ¿Qué sucede?",
+      "opciones": [
+        "El gasto no puede procesarse y el investigador debe gestionar la devolución del valor cuando corresponda.",
+        "La factura se acepta sin ninguna revisión adicional.",
+        "El reembolso se realiza automáticamente."
+      ],
+      "correcta": "A"
+    },
+    {
+      "categoria": "Fondos concursables internos",
+      "pregunta": "Situación: Recibiste un anticipo para realizar actividades de tu proyecto, pero al justificar los gastos se identifica que utilizaste menos dinero del entregado. ¿Qué debes hacer con el excedente?",
+      "opciones": [
+        "Conservarlo para utilizarlo libremente en futuros gastos.",
+        "Devolver o depositar el excedente y adjuntar el comprobante correspondiente a la justificación de gastos.",
+        "Incorporarlo automáticamente al presupuesto de otro proyecto."
+      ],
+      "correcta": "B"
+    },
+    {
+      "categoria": "Registro de publicaciones",
+      "pregunta": "Situación: Eres investigador de la UIDE y necesitas registrar una publicación académica. ¿En qué período puedes realizar este proceso?",
+      "opciones": [
+        "Del 1 al 10 de cada mes.",
+        "Del día 15 de un mes al día 15 del siguiente.",
+        "Únicamente durante diciembre."
+      ],
+      "correcta": "B"
+    },
+    {
+      "categoria": "Registro de publicaciones",
+      "pregunta": "Situación: Quieres registrar una publicación, pero la revista todavía no consta en el registro institucional. ¿Hasta qué fecha debes solicitar su revisión?",
+      "opciones": [
+        "Hasta el día 10 de cada mes.",
+        "Hasta el día 20 de cada mes.",
+        "Hasta el último día del año."
+      ],
+      "correcta": "B"
+    },
+    {
+      "categoria": "Registro de publicaciones",
+      "pregunta": "Situación: Registraste una publicación académica y entregaste todos los documentos habilitantes. ¿Cómo se determina cuándo será evaluada?",
+      "opciones": [
+        "La publicación se evalúa inmediatamente después de registrarla.",
+        "La publicación se asigna a un bloque de evaluación según la fecha de recepción de la documentación completa y se evalúa durante el mes siguiente a dicho bloque.",
+        "Todas las publicaciones se evalúan únicamente al finalizar el año."
+      ],
+      "correcta": "B"
+    },
+    {
+      "categoria": "Convocatoria APC 2026",
+      "pregunta": "Situación: Necesitas solicitar financiamiento para el cargo de publicación de un artículo científico. ¿Hasta qué día de cada mes debes presentar tu expediente completo?",
+      "opciones": [
+        "Hasta el día 20.",
+        "Hasta el día 25.",
+        "Hasta el día 10."
+      ],
+      "correcta": "C"
+    },
+    {
+      "categoria": "Convocatoria APC 2026",
+      "pregunta": "Situación: Un investigador desea solicitar financiamiento para publicar un artículo científico. ¿Qué condición debe cumplir la revista?",
+      "opciones": [
+        "Estar indexada en Scopus o Web of Science y cumplir los cuartiles establecidos en la convocatoria.",
+        "Ser cualquier revista que cobre por publicar.",
+        "Tener únicamente presencia en redes sociales."
+      ],
+      "correcta": "A"
+    },
+    {
+      "categoria": "Convocatoria APC 2026",
+      "pregunta": "Situación: Ya presentaste varias solicitudes APC durante 2026 y deseas realizar una nueva postulación. ¿Cuál es el límite establecido?",
+      "opciones": [
+        "Una solicitud por investigador.",
+        "Máximo tres solicitudes por docente o investigador durante 2026.",
+        "No existe límite de solicitudes."
+      ],
+      "correcta": "B"
+    },
+    {
+      "categoria": "Convocatoria APC 2026",
+      "pregunta": "Situación: Eres investigador de la UIDE y deseas solicitar financiamiento para publicar un artículo científico mediante la convocatoria APC 2026. ¿Qué documentos debes presentar para realizar tu postulación?",
+      "opciones": [
+        "Únicamente el Anexo A – Solicitud APC y el Anexo B – Declaración Integrada.",
+        "El Anexo A, el Anexo B, la carta o correo oficial de aceptación del artículo, el manuscrito final aceptado y los demás documentos habilitantes que correspondan.",
+        "Solamente la carta de aceptación del artículo y la factura de publicación."
+      ],
+      "correcta": "B"
+    },
+    {
+      "categoria": "Convocatoria APC 2026",
+      "pregunta": "Situación: Eres investigador de la UIDE y deseas solicitar financiamiento para publicar un artículo científico mediante la convocatoria APC 2026. ¿Qué condiciones debes cumplir para presentar tu solicitud?",
+      "opciones": [
+        "Ser coautor de cualquier artículo, aunque la revista no esté indexada y la factura esté emitida a nombre de otra persona.",
+        "Ser el primer autor o autor de correspondencia, contar con la filiación UIDE correctamente registrada, tener el artículo aceptado en una revista elegible y presentar la documentación requerida, incluida la factura o invoice a nombre del docente cuando corresponda al reembolso.",
+        "Presentar únicamente la carta de aceptación del artículo, sin necesidad de verificar la indexación, la filiación institucional ni los requisitos de la convocatoria."
+      ],
+      "correcta": "B"
+    },
+    {
+      "categoria": "Producción académica",
+      "pregunta": "Situación: Publicaste un artículo científico y necesitas incorporarlo al registro institucional de la UIDE. ¿Qué procedimiento debes seguir?",
+      "opciones": [
+        "Enviar únicamente el enlace del artículo a la DGI, sin realizar el registro en SADUI.",
+        "Reunir los documentos habilitantes, registrar la publicación en SADUI y enviar la documentación correspondiente al correo publicaciones@uide.edu.ec.",
+        "Registrar el artículo en SADUI y esperar su validación sin enviar los documentos habilitantes."
+      ],
+      "correcta": "B"
+    },
+    {
+      "categoria": "Producción académica",
+      "pregunta": "Situación: Publicaste un artículo arbitrado y necesitas registrarlo como producción académica en la UIDE. ¿Qué documentos habilitantes debes presentar?",
+      "opciones": [
+        "El enlace de la versión final de la publicación indexada y el archivo PDF de la publicación.",
+        "Únicamente una captura de pantalla del título del artículo.",
+        "Un certificado de asistencia a un congreso."
+      ],
+      "correcta": "A"
+    },
+    {
+      "categoria": "Producción académica",
+      "pregunta": "Situación: Participaste como autor o coautor de un capítulo de libro y deseas registrarlo como producción académica en la UIDE. ¿Qué documentos habilitantes debes presentar?",
+      "opciones": [
+        "Únicamente la portada del libro, el título del capítulo y el nombre del autor.",
+        "La primera página del capítulo, portada y contraportada del libro, índice, sección donde conste el autor o coautor, filiación UIDE, año de publicación, consejo editorial o auspicio institucional, código ISBN y evidencia de revisión por pares externos.",
+        "Solamente el archivo PDF del capítulo y una carta de aceptación de la editorial."
+      ],
+      "correcta": "B"
+    },
+    {
+      "categoria": "Producción académica",
+      "pregunta": "Situación: Publicaste un libro académico y deseas registrarlo como producción académica en la UIDE. ¿Qué documentos habilitantes debes presentar?",
+      "opciones": [
+        "Únicamente la portada del libro, el nombre del autor y el año de publicación.",
+        "El archivo PDF del libro y una carta de aceptación de la editorial.",
+        "La portada y contraportada, índice, sección donde conste el autor o coautor, filiación UIDE, año de publicación, consejo editorial o auspicio institucional, código ISBN y evidencia de revisión por pares externos."
+      ],
+      "correcta": "C"
+    },
+    {
+      "categoria": "Producción académica",
+      "pregunta": "Situación: Obtuviste un registro de propiedad intelectual como resultado de tu investigación y deseas incorporarlo a la producción académica de la UIDE. ¿Qué documentos habilitantes debes presentar?",
+      "opciones": [
+        "Únicamente una descripción de la creación y una carta del investigador.",
+        "El registro emitido por el Servicio Nacional de Derechos Intelectuales (SENADI) y el enlace de acceso al registro, cuando aplique.",
+        "Una presentación del proyecto y un certificado de participación en investigación."
+      ],
+      "correcta": "B"
+    },
+    {
+      "categoria": "Fondo de Productividad Académica",
+      "pregunta": "Situación: Eres beneficiario del Fondo de Productividad Académica 2026 y tienes recursos asignados que todavía no has ejecutado. ¿Hasta qué fecha debes ejecutar y justificar dichos recursos?",
+      "opciones": [
+        "Hasta el 31 de diciembre de 2026.",
+        "Hasta el 5 de diciembre de 2026.",
+        "Hasta el 15 de enero de 2027."
+      ],
+      "correcta": "B"
+    },
+    {
+      "categoria": "Fondo de Productividad Académica",
+      "pregunta": "Situación: Recibiste recursos del Fondo de Productividad Académica y deseas utilizarlos para fortalecer tus actividades de investigación. ¿Cuál de los siguientes gastos está contemplado entre los usos permitidos?",
+      "opciones": [
+        "Participación en congresos científicos, actividades de formación y adquisición de recursos relacionados con la investigación.",
+        "Gastos personales sin relación con actividades académicas.",
+        "Compra de artículos personales que no estén relacionados con investigación."
+      ],
+      "correcta": "A"
+    },
+    {
+      "categoria": "Fondo de Productividad Académica",
+      "pregunta": "Situación: Tienes recursos asignados del Fondo de Productividad Académica y necesitas utilizarlos para una actividad autorizada. ¿Cuál es la modalidad principal de gestión de gastos?",
+      "opciones": [
+        "Entrega del dinero sin necesidad de justificar su utilización.",
+        "Pago directo de todos los gastos, sin presentar respaldos.",
+        "Reembolso, mediante la presentación de la documentación de respaldo correspondiente."
+      ],
+      "correcta": "C"
+    },
+    {
+      "categoria": "Fondo de Productividad Académica",
+      "pregunta": "Situación: Eres investigador de la UIDE y necesitas utilizar tu Fondo de Productividad Académica para comprar boletos aéreos y contratar un ayudante de investigación. ¿Cómo debes gestionar estos gastos?",
+      "opciones": [
+        "Realizar los pagos personalmente y solicitar el reembolso posteriormente.",
+        "Gestionar estos gastos mediante los procesos institucionales específicos, ya que no se realizan bajo la modalidad de reembolso.",
+        "Utilizar el Fondo sin solicitar ningún trámite institucional."
+      ],
+      "correcta": "B"
+    },
+    {
+      "categoria": "Fondo de Productividad Académica",
+      "pregunta": "Situación: Eres beneficiario del Fondo de Productividad Académica 2026 y no alcanzaste a utilizar todos los recursos asignados antes de la fecha límite. ¿Qué sucede con el saldo restante?",
+      "opciones": [
+        "Se acumula automáticamente para el siguiente año.",
+        "Puedes utilizarlo durante enero del siguiente año sin autorización.",
+        "Los saldos no utilizados después del 5 de diciembre de 2026 no podrán ejecutarse."
+      ],
+      "correcta": "C"
+    },
+    {
+      "categoria": "Proyectos doctorales",
+      "pregunta": "Situación: Eres docente de la UIDE, estás cursando un doctorado y necesitas registrar institucionalmente tu proyecto de investigación doctoral. ¿Qué formato debes completar?",
+      "opciones": [
+        "Plantilla de registro de proyectos de investigación de doctorado.",
+        "Registro de Grupo de Investigación.",
+        "Registro de Centro de Investigación."
+      ],
+      "correcta": "A"
+    },
+    {
+      "categoria": "Proyectos doctorales",
+      "pregunta": "Situación: Estás completando la plantilla de registro de tu proyecto doctoral. ¿Qué información académica debes incluir?",
+      "opciones": [
+        "Únicamente el título de la tesis y tu nombre.",
+        "Programa de doctorado, universidad, título por obtener, tutor o director de tesis, correo del tutor/director y código de investigador SENESCYT.",
+        "Solamente el programa doctoral y la fecha de graduación."
+      ],
+      "correcta": "B"
+    },
+    {
+      "categoria": "Proyectos doctorales",
+      "pregunta": "Situación: Estás completando la Plantilla de registro de proyectos de investigación de doctorado. ¿Qué información debes incluir en el apartado «Información del proyecto»?",
+      "opciones": [
+        "Únicamente los gastos de matrícula y el presupuesto doctoral.",
+        "Solamente el título de la tesis y el nombre de la universidad.",
+        "Título del proyecto doctoral, línea de investigación UIDE, fechas de ejecución, resumen y palabras clave, ODS e impactos, cronograma y productos esperados."
+      ],
+      "correcta": "C"
+    },
+    {
+      "categoria": "Proyectos doctorales",
+      "pregunta": "Situación: Estás completando la Plantilla de registro de proyectos de investigación de doctorado y debes incluir el cronograma de ejecución. ¿Qué cronograma debes utilizar para realizar el registro institucional?",
+      "opciones": [
+        "El cronograma aprobado o aceptado por la universidad en la que cursas el doctorado, correspondiente a las actividades de tu investigación doctoral.",
+        "El cronograma de cualquier proyecto de investigación registrado en la UIDE.",
+        "Un cronograma elaborado por el investigador, con fechas establecidas libremente y sin necesidad de aprobación."
+      ],
+      "correcta": "A"
+    },
+    {
+      "categoria": "Proyectos doctorales",
+      "pregunta": "Situación: Eres docente investigador de la UIDE y necesitas registrar institucionalmente tu proyecto doctoral. ¿Cuál es el procedimiento que debes seguir?",
+      "opciones": [
+        "Completar la plantilla de registro y comenzar directamente la ejecución del proyecto sin revisión institucional.",
+        "Verificar que el proyecto esté aprobado por el tutor o director de tesis, completar la plantilla con la información del proyecto doctoral, enviar la documentación para revisión institucional y esperar a que la DGID realice y mantenga el registro.",
+        "Solicitar el registro directamente a la universidad donde cursas el doctorado, sin presentar documentación a la DGID."
+      ],
+      "correcta": "B"
+    },
+    {
+      "categoria": "Proyectos doctorales",
+      "pregunta": "Situación: Tu proyecto doctoral ya está registrado y has desarrollado avances de tesis, ponencias y artículos científicos. ¿Qué debes hacer con esta información?",
+      "opciones": [
+        "Esperar hasta obtener el título doctoral para comunicar los resultados.",
+        "Registrar únicamente las publicaciones y eliminar los demás avances.",
+        "Mantener actualizada la información del período de ejecución, cronograma, estado del proyecto y productos derivados."
+      ],
+      "correcta": "C"
+    },
+    {
+      "categoria": "Centros de Investigación",
+      "pregunta": "Situación: Un equipo de investigadores de la UIDE desea conformar un Centro de Investigación. ¿Qué documentos debe presentar para solicitar su creación?",
+      "opciones": [
+        "Memorando de solicitud, Registro de Centro de Investigación, hojas de vida de los miembros y memorando de designación del directorio.",
+        "Únicamente una propuesta de investigación y un presupuesto.",
+        "Registro de Grupo de Investigación y acta de elección del coordinador."
+      ],
+      "correcta": "A"
+    },
+    {
+      "categoria": "Centros de Investigación",
+      "pregunta": "Situación: Tu equipo desea crear un Centro de Investigación en la UIDE. ¿Qué formato institucional debe completar para registrar la identificación, integrantes y estructura del Centro?",
+      "opciones": [
+        "Plantilla de registro de proyectos doctorales.",
+        "Registro de Centro de Investigación.",
+        "Registro de Grupo de Investigación."
+      ],
+      "correcta": "B"
+    },
+    {
+      "categoria": "Centros de Investigación",
+      "pregunta": "Situación: Un equipo de investigadores de la UIDE desea crear un Centro de Investigación. ¿Cuál es el procedimiento que debe seguir para obtener su aprobación institucional?",
+      "opciones": [
+        "Presentar únicamente una solicitud a la DGID y comenzar las actividades del Centro sin esperar la aprobación.",
+        "Registrar directamente el Centro de Investigación sin definir previamente su estructura ni presentar documentación.",
+        "Definir los miembros, dirección, temática, líneas de investigación y estructura del Centro; preparar la solicitud y los documentos requeridos; pasar por la revisión de la DGID y, si la solicitud es favorable, formalizar la aprobación y asignar el registro."
+      ],
+      "correcta": "C"
+    },
+    {
+      "categoria": "Centros de Investigación",
+      "pregunta": "Situación: La DGID revisó tu solicitud para crear un Centro de Investigación e identificó documentación incompleta. ¿Cuánto tiempo tienes para presentar la información actualizada?",
+      "opciones": [
+        "10 días calendario.",
+        "30 días calendario.",
+        "5 días calendario."
+      ],
+      "correcta": "A"
+    },
+    {
+      "categoria": "Grupos y Redes de Investigación",
+      "pregunta": "Situación: Varios docentes desean conformar un Grupo de Investigación en la UIDE. ¿Qué documentos deben preparar para solicitar su creación?",
+      "opciones": [
+        "Únicamente las hojas de vida y el nombre del grupo.",
+        "Memorando de solicitud, Registro de Grupo de Investigación, hojas de vida y acta de elección del coordinador.",
+        "Registro de Centro de Investigación y memorando de designación del directorio."
+      ],
+      "correcta": "B"
+    },
+    {
+      "categoria": "Grupos y Redes de Investigación",
+      "pregunta": "Situación: Durante el desarrollo de las actividades de un Grupo de Investigación de la UIDE, es necesario incorporar a un nuevo integrante o cambiar al coordinador. ¿Qué procedimiento se debe seguir?",
+      "opciones": [
+        "Realizar los cambios directamente, sin informar a ninguna unidad institucional.",
+        "Esperar hasta el cierre del Grupo de Investigación para notificar los cambios.",
+        "Comunicar las modificaciones a la DGID dentro de los tiempos que correspondan, para mantener actualizada la información del grupo."
+      ],
+      "correcta": "C"
+    },
+    {
+      "categoria": "Grupos y Redes de Investigación",
+      "pregunta": "Situación: Tu Grupo de Investigación ya fue aprobado y se encuentra desarrollando sus actividades. ¿Qué información debe mantenerse actualizada para el seguimiento institucional?",
+      "opciones": [
+        "Los informes de ejecución de actividades, cumplimiento de la planificación anual, nuevos avances estratégicos, articulación con otras estructuras, obtención de fondos externos y cambios de integrantes o coordinador, cuando correspondan.",
+        "Únicamente los nombres de los integrantes y del coordinador.",
+        "Solamente las publicaciones científicas generadas por el grupo."
+      ],
+      "correcta": "A"
+    },
+    {
+      "categoria": "Grupos y Redes de Investigación",
+      "pregunta": "Situación: La DGID detectó información incompleta en la solicitud de creación de tu Grupo de Investigación. ¿Qué debes hacer?",
+      "opciones": [
+        "Presentar nuevamente toda la solicitud después de un año.",
+        "Corregir las observaciones y entregar la información actualizada dentro de 10 días calendario.",
+        "Iniciar las actividades del grupo sin atender las observaciones."
+      ],
+      "correcta": "B"
+    },
+    {
+      "categoria": "Grupos y Redes de Investigación",
+      "pregunta": "Situación: Participas en una Red de Investigación vinculada a la UIDE y necesitas mantener actualizada la información institucional. ¿Qué debes hacer?",
+      "opciones": [
+        "Participar en la red sin registrar información ni conservar documentos.",
+        "Registrar únicamente el nombre de la red cuando finalice tu participación.",
+        "Verificar la información de la red, registrar la participación institucional y conservar los respaldos correspondientes."
+      ],
+      "correcta": "C"
+    },
+    {
+      "categoria": "Grupos y Redes de Investigación",
+      "pregunta": "Situación: Tu equipo está conformando un Grupo de Investigación en la UIDE y necesita seleccionar a su coordinador. ¿Qué condición debe cumplir la persona elegida?",
+      "opciones": [
+        "Ser un docente del grupo elegido por mayoría de votos entre los integrantes.",
+        "Ser un estudiante de pregrado que participe en el grupo.",
+        "Ser un investigador externo designado directamente por la DGI."
+      ],
+      "correcta": "A"
+    },
+    {
+      "categoria": "Grupos y Redes de Investigación",
+      "pregunta": "Situación: Durante el desarrollo de las actividades, los integrantes de un Grupo de Investigación consideran necesario modificar uno de sus objetivos. ¿Qué corresponde hacer?",
+      "opciones": [
+        "Modificar el objetivo directamente en la planificación sin comunicarlo a la DGID.",
+        "Solicitar la modificación con el acuerdo colectivo de los integrantes y obtener la aprobación institucional.",
+        "Esperar al cierre del Grupo para informar el cambio."
+      ],
+      "correcta": "B"
+    },
+    {
+      "categoria": "Grupos y Redes de Investigación",
+      "pregunta": "Situación: Tu Grupo de Investigación ha disminuido su número de integrantes y actualmente cuenta con menos de tres docentes. ¿Qué debe hacer el equipo para evitar su cierre?",
+      "opciones": [
+        "Continuar funcionando sin realizar ninguna modificación.",
+        "Solicitar automáticamente su transformación en Centro de Investigación.",
+        "Restablecer su estructura dentro del plazo establecido, que puede ser de hasta 15 días calendario."
+      ],
+      "correcta": "C"
+    },
+    {
+      "categoria": "Grupos y Redes de Investigación",
+      "pregunta": "Situación: Participas en una Red de Investigación vinculada a la UIDE y se produce un cambio en los datos de tu vinculación institucional. ¿Qué corresponde hacer?",
+      "opciones": [
+        "Actualizar el registro institucional y conservar las evidencias correspondientes.",
+        "Esperar hasta finalizar la participación en la red para informar el cambio.",
+        "Eliminar el registro anterior sin guardar información."
+      ],
+      "correcta": "A"
+    },
+    {
+      "categoria": "Semilleros de Investigación",
+      "pregunta": "Situación: La UIDE desea impulsar un Semillero de Investigación para fortalecer las capacidades investigativas de sus estudiantes. ¿Quiénes participan en esta estructura?",
+      "opciones": [
+        "Únicamente docentes que cuentan con proyectos de investigación financiados.",
+        "Estudiantes que desarrollan actividades de investigación, con el acompañamiento académico de docentes e investigadores.",
+        "Exclusivamente investigadores externos a la universidad."
+      ],
+      "correcta": "B"
+    },
+    {
+      "categoria": "Conceptos clave",
+      "pregunta": "Situación: Un investigador de la UIDE está preparando un libro académico y también participa en una revista científica. ¿Cuál es la diferencia entre los códigos ISBN e ISSN?",
+      "opciones": [
+        "El ISBN identifica libros y el ISSN identifica publicaciones seriadas, como revistas.",
+        "El ISBN identifica revistas científicas y el ISSN identifica libros.",
+        "Ambos códigos se utilizan exclusivamente para identificar artículos científicos."
+      ],
+      "correcta": "A"
+    },
+    {
+      "categoria": "Conceptos clave",
+      "pregunta": "Situación: Un investigador está preparando la publicación de un libro en Ecuador y necesita conocer qué código de identificación proporciona la Cámara Ecuatoriana del Libro. ¿Cuál es?",
+      "opciones": [
+        "ISSN.",
+        "ISBN.",
+        "ORCID."
+      ],
+      "correcta": "B"
+    },
+    {
+      "categoria": "Conceptos clave",
+      "pregunta": "Situación: Un equipo de investigadores de la UIDE está preparando una publicación académica y necesita conocer cuántos autores de la institución pueden participar.",
+      "opciones": [
+        "Dos autores UIDE.",
+        "Seis autores UIDE.",
+        "Cuatro autores UIDE."
+      ],
+      "correcta": "C"
+    },
+    {
+      "categoria": "Conceptos clave",
+      "pregunta": "Situación: Un equipo de investigación desea transformar sus resultados científicos en contenidos sencillos y comprensibles para personas que no son especialistas en el tema. ¿Qué tipo de comunicación corresponde?",
+      "opciones": [
+        "Divulgación científica.",
+        "Difusión científica.",
+        "Registro de producción académica."
+      ],
+      "correcta": "A"
+    },
+    {
+      "categoria": "Conceptos clave",
+      "pregunta": "Situación: La UIDE cuenta con seis líneas institucionales de investigación. ¿Cuál de las siguientes opciones menciona correctamente dos de ellas?",
+      "opciones": [
+        "Turismo y Gastronomía; Marketing Digital.",
+        "Educación y Cultura; Innovación y Desarrollo Tecnológico.",
+        "Contabilidad Financiera; Administración de Empresas."
+      ],
+      "correcta": "B"
+    },
+    {
+      "categoria": "Conceptos clave",
+      "pregunta": "Situación: Un investigador está registrando su producción académica y le solicitan su identificador ORCID. ¿Qué es ORCID?",
+      "opciones": [
+        "Un código que identifica exclusivamente revistas científicas.",
+        "Un sistema utilizado únicamente para solicitar financiamiento de proyectos.",
+        "Un identificador digital único y persistente que permite distinguir a un investigador y vincularlo con sus contribuciones académicas."
+      ],
+      "correcta": "C"
+    },
+    {
+      "categoria": "Equipo DGID",
+      "pregunta": "Situación: Eres docente de la Facultad de Ingenierías Digitales y Tecnologías Emergentes de la UIDE y necesitas comunicarte con la persona responsable de la coordinación de investigación. ¿A quién debes dirigirte?",
+      "opciones": [
+        "Angélica Quito Carrión.",
+        "Natalia Romero Sandoval.",
+        "Andrea Pacheco Barzallo."
+      ],
+      "correcta": "A"
+    },
+    {
+      "categoria": "Objetivos de Desarrollo Sostenible",
+      "pregunta": "Situación: Un investigador desarrolla un proyecto enfocado en la sostenibilidad y adaptación al cambio climático. ¿Con cuál de los siguientes Objetivos de Desarrollo Sostenible se relaciona directamente?",
+      "opciones": [
+        "ODS 4 – Educación de calidad.",
+        "ODS 13 – Acción por el clima.",
+        "ODS 3 – Salud y bienestar."
+      ],
+      "correcta": "B"
+    },
+    {
+      "categoria": "Conceptos clave",
+      "pregunta": "Situación: Un grupo de investigadores de la UIDE escucha sobre REMCI, una red que promueve la participación y visibilidad de las mujeres en la investigación científica. ¿Qué significan sus siglas?",
+      "opciones": [
+        "Registro Ecuatoriano de Métodos Científicos e Innovación.",
+        "Red de Educación Multidisciplinaria y Cooperación Internacional.",
+        "Red Ecuatoriana de Mujeres Científicas."
+      ],
+      "correcta": "C"
+    },
+    {
+      "categoria": "Difusión y divulgación",
+      "pregunta": "Situación: Un equipo de investigadores de la UIDE desea comunicar los resultados de su investigación mediante publicaciones científicas, informes y otros canales académicos. ¿Cuál es el propósito principal de la difusión científica?",
+      "opciones": [
+        "Comunicar resultados, avances y productos de investigación mediante canales académicos y científicos, principalmente a públicos especializados.",
+        "Transformar exclusivamente los conocimientos científicos en contenidos recreativos para públicos infantiles.",
+        "Gestionar únicamente la organización de eventos institucionales."
+      ],
+      "correcta": "A"
+    },
+    {
+      "categoria": "Equipo DGID",
+      "pregunta": "Situación: Eres docente de la Facultad de Jurisprudencia, Ciencias Sociales y Humanidades de la UIDE y necesitas comunicarte con el coordinador de investigación de tu facultad. ¿A quién debes dirigirte?",
+      "opciones": [
+        "Patricio Andino Sosa.",
+        "Liosday Landaburo.",
+        "Juan Francisco Nicolalde."
+      ],
+      "correcta": "B"
+    },
+    {
+      "categoria": "Objetivos de Desarrollo Sostenible",
+      "pregunta": "Situación: Un equipo de investigadores de la UIDE desarrolla un proyecto relacionado con el acceso a una educación inclusiva, equitativa y de calidad. ¿Con qué Objetivo de Desarrollo Sostenible se relaciona directamente?",
+      "opciones": [
+        "ODS 8 – Trabajo decente y crecimiento económico.",
+        "ODS 10 – Reducción de las desigualdades.",
+        "ODS 4 – Educación de calidad."
+      ],
+      "correcta": "C"
+    },
+    {
+      "categoria": "Objetivos de Desarrollo Sostenible",
+      "pregunta": "Situación: Un equipo de investigadores de la UIDE desarrolla un proyecto enfocado en mejorar el acceso al agua potable, el saneamiento y la gestión sostenible de los recursos hídricos. ¿Con qué Objetivo de Desarrollo Sostenible se relaciona directamente?",
+      "opciones": [
+        "ODS 6 – Agua limpia y saneamiento.",
+        "ODS 13 – Acción por el clima.",
+        "ODS 11 – Ciudades y comunidades sostenibles."
+      ],
+      "correcta": "A"
+    },
+    {
+      "categoria": "Difusión y divulgación",
+      "pregunta": "Situación: Eres investigador de la UIDE y estás organizando un evento académico que necesita difusión a través de los canales institucionales. ¿Cómo se llama el formato que debes completar para solicitar la difusión del evento?",
+      "opciones": [
+        "Formulario de registro de producción académica.",
+        "Brief de difusión.",
+        "Anexo D – Monitoreo de proyectos."
+      ],
+      "correcta": "B"
+    },
+    {
+      "categoria": "Difusión y divulgación",
+      "pregunta": "Situación: Un docente investigador de la UIDE participa en un monólogo científico en el que presenta conocimientos y resultados de investigación al público general mediante un lenguaje sencillo y accesible. ¿Qué tipo de actividad está realizando?",
+      "opciones": [
+        "Diversión científica.",
+        "Difusión científica.",
+        "Divulgación científica."
+      ],
+      "correcta": "C"
+    },
+    {
+      "categoria": "Incentivos económicos",
+      "pregunta": "Situación: Eres docente investigador de la UIDE y publicaste un artículo científico en una revista indexada en Scopus o Web of Science (WOS), cuartil Q1. ¿Cuál es el valor del incentivo económico establecido?",
+      "opciones": [
+        "USD 1.600.",
+        "USD 1.200.",
+        "USD 1.000."
+      ],
+      "correcta": "A"
+    },
+    {
+      "categoria": "Incentivos económicos",
+      "pregunta": "Situación: Publicaste un artículo científico en una revista indexada en Scopus o WOS, cuartil Q2. ¿Qué valor corresponde a este tipo de publicación?",
+      "opciones": [
+        "USD 900.",
+        "USD 1.200.",
+        "USD 1.600."
+      ],
+      "correcta": "B"
+    },
+    {
+      "categoria": "Incentivos económicos",
+      "pregunta": "Situación: Participaste en un congreso científico y tu conference paper fue publicado en las memorias del evento, indexadas en Scopus o WOS, cuartil Q1. ¿Cuál es el incentivo económico establecido?",
+      "opciones": [
+        "USD 1.600.",
+        "USD 750.",
+        "USD 900."
+      ],
+      "correcta": "C"
+    },
+    {
+      "categoria": "Incentivos económicos",
+      "pregunta": "Situación: Eres autor de un libro académico publicado por una editorial indexada en Scopus o WOS SPI, cuartil Q1. ¿Cuál es el incentivo económico correspondiente?",
+      "opciones": [
+        "USD 1.300.",
+        "USD 750.",
+        "USD 1.000."
+      ],
+      "correcta": "A"
+    },
+    {
+      "categoria": "Equipo DGID",
+      "pregunta": "Situación: Eres docente investigador de la UIDE y necesitas información sobre cómo difundir tu artículo científico y dar a conocer los resultados de tu investigación. ¿A qué integrante del equipo de la DGID debes acudir?",
+      "opciones": [
+        "Marcela Ledesma.",
+        "Doménica Espinosa.",
+        "Caterina Tuci.",
+        "Andrea Farfán."
+      ],
+      "correcta": "D"
+    },
+    {
+      "categoria": "Reglamento de Investigación",
+      "pregunta": "Situación: Eres docente investigador de la UIDE y has desarrollado una propuesta de investigación que deseas ejecutar dentro de la universidad. ¿Qué debes hacer para que el proyecto sea reconocido institucionalmente?",
+      "opciones": [
+        "Obtener la autorización de la Dirección General de Investigación, Desarrollo e Innovación (DGID), siguiendo el procedimiento vigente.",
+        "Iniciar las actividades y solicitar el reconocimiento institucional cuando finalice el proyecto.",
+        "Registrar únicamente los resultados de la investigación, sin necesidad de autorización previa."
+      ],
+      "correcta": "A"
+    },
+    {
+      "categoria": "Reglamento de Investigación",
+      "pregunta": "Situación: Identificaste una convocatoria internacional que ofrece financiamiento para proyectos de investigación y deseas presentar una propuesta en representación de la UIDE. ¿Cuál es el procedimiento correcto?",
+      "opciones": [
+        "Enviar directamente la propuesta a la entidad financiadora, utilizando el nombre de la universidad.",
+        "Gestionar la propuesta a través de la DGID, instancia encargada de solicitar la autorización institucional correspondiente.",
+        "Solicitar autorización únicamente al coordinador de investigación de tu facultad y enviar la propuesta."
+      ],
+      "correcta": "B"
+    },
+    {
+      "categoria": "Reglamento de Investigación",
+      "pregunta": "Situación: Eres docente investigador de la UIDE y acabas de publicar un artículo científico. ¿Qué responsabilidad tienes respecto a este producto académico?",
+      "opciones": [
+        "Registrar la publicación únicamente cuando necesites solicitar un incentivo económico.",
+        "Esperar a que la revista científica notifique directamente a la DGID sobre la publicación.",
+        "Enviar la información y los documentos necesarios para registrar el producto académico en los instrumentos institucionales correspondientes."
+      ],
+      "correcta": "C"
+    },
+    {
+      "categoria": "Reglamento de Investigación",
+      "pregunta": "Situación: Participas activamente en una Red de Investigación y se requiere pagar una membresía para mantener la participación institucional. ¿Qué debes hacer?",
+      "opciones": [
+        "Solicitar la autorización de las autoridades correspondientes, a través del requerimiento del docente responsable y considerando el presupuesto de la DGID.",
+        "Realizar el pago directamente y solicitar su reconocimiento sin autorización institucional.",
+        "Solicitar que los integrantes paguen la membresía y registrar posteriormente el gasto como institucional."
+      ],
+      "correcta": "A"
+    },
+    {
+      "categoria": "Reglamento de Investigación",
+      "pregunta": "Situación: Tu equipo de investigación desarrolló una innovación tecnológica con potencial de transferencia a otras instituciones. Antes de gestionar su comercialización o transferencia, ¿qué procedimiento institucional corresponde seguir?",
+      "opciones": [
+        "Negociar directamente con empresas externas sin comunicarlo a la universidad.",
+        "Gestionar el proceso a través del Centro de Transferencia Tecnológica (CTT), conforme a las disposiciones institucionales.",
+        "Compartir libremente los resultados con cualquier empresa y formalizar después los acuerdos."
+      ],
+      "correcta": "B"
+    },
+    {
+      "categoria": "Reglamento de Investigación",
+      "pregunta": "Situación: Eres Investigador Principal de un proyecto de investigación de la UIDE y deseas incorporar estudiantes para que participen en las actividades investigativas. Según el reglamento, ¿qué debes considerar?",
+      "opciones": [
+        "Que los estudiantes únicamente pueden participar cuando el proyecto cuenta con financiamiento externo.",
+        "Que los estudiantes solo pueden incorporarse cuando el proyecto haya finalizado.",
+        "Que los proyectos de investigación deben incluir estudiantes de la institución, de acuerdo con las actividades y objetivos del programa al que estén inscritos."
+      ],
+      "correcta": "C"
+    },
+    {
+      "categoria": "Reglamento de Investigación",
+      "pregunta": "Situación: Eres docente investigador de la UIDE y, junto con tus compañeros, deseas conformar un Grupo de Investigación para desarrollar proyectos científicos. ¿Cuál es el número mínimo de docentes investigadores requerido?",
+      "opciones": [
+        "Tres docentes investigadores.",
+        "Cinco docentes investigadores.",
+        "Dos docentes investigadores."
+      ],
+      "correcta": "A"
+    },
+    {
+      "categoria": "Reglamento de Investigación",
+      "pregunta": "Situación: Eres docente investigador de la UIDE y acabas de finalizar un artículo científico que será publicado en una revista académica. ¿Cómo debes registrar tu filiación institucional?",
+      "opciones": [
+        "Únicamente con el nombre de la facultad a la que perteneces.",
+        "Incluyendo la filiación institucional de la Universidad Internacional del Ecuador (UIDE), en español o inglés, y verificando que esté correctamente registrada.",
+        "Con el nombre de la institución donde se encuentra la revista."
+      ],
+      "correcta": "B"
+    },
+    {
+      "categoria": "Reglamento de Investigación",
+      "pregunta": "Situación: Eres docente investigador de la UIDE y actualmente participas como Investigador Principal en un proyecto. Otro equipo desea incorporarte a una nueva investigación. ¿Qué establece el reglamento sobre tu participación?",
+      "opciones": [
+        "Solo puedes participar en un proyecto de investigación durante toda tu trayectoria académica.",
+        "Puedes ser Investigador Principal de todos los proyectos que desees, sin ninguna restricción.",
+        "Puedes participar como investigador principal en un proyecto de investigación; la participación en otros proyectos se determina según las bases correspondientes."
+      ],
+      "correcta": "C"
+    },
+    {
+      "categoria": "Reglamento de Investigación",
+      "pregunta": "Situación: Eres docente investigador de la UIDE y estás preparando una propuesta de investigación. Antes de presentarla, necesitas verificar que se encuentre alineada con las prioridades investigativas de la institución. ¿Qué debes considerar?",
+      "opciones": [
+        "Que la propuesta se encuentre articulada con las líneas y sublíneas de investigación vigentes de la UIDE.",
+        "Que el tema sea de interés personal, independientemente de las líneas de investigación institucionales.",
+        "Que el proyecto pertenezca obligatoriamente a todas las líneas de investigación de la universidad."
+      ],
+      "correcta": "A"
+    },
+    {
+      "categoria": "Ronda divertida",
+      "pregunta": "Situación: Un investigador te pregunta para qué sirve ORCID porque cree que es otra plataforma donde debe subir fotos de sus congresos. ¿Qué le respondes?",
+      "opciones": [
+        "Es un identificador digital que permite distinguir a los investigadores y vincular sus contribuciones académicas.",
+        "Es el horóscopo del investigador: te dice si este mes te aceptan el paper o Mercurio retrógrado te manda a revisión.",
+        "Es un código secreto que, si lo dices tres veces frente al computador, hace que Scopus te indexe automáticamente."
+      ],
+      "correcta": "A"
+    },
+    {
+      "categoria": "Ronda divertida",
+      "pregunta": "Situación: Una investigadora desarrolló un estudio sobre contaminación ambiental y quiere explicar sus resultados a la ciudadanía mediante un video sencillo, sin utilizar lenguaje técnico. ¿Qué tipo de actividad está realizando?",
+      "opciones": [
+        "Una campaña para convertirse en la primera investigadora nominada a los Premios Óscar por explicar el calentamiento global.",
+        "Divulgación científica.",
+        "Una estrategia para que su mamá deje de preguntar: «¿Y tú exactamente qué haces en la universidad?»."
+      ],
+      "correcta": "B"
+    },
+    {
+      "categoria": "Ronda divertida",
+      "pregunta": "Situación: Un grupo de investigadores de distintas universidades trabaja conjuntamente en un proyecto, compartiendo conocimientos y recursos para desarrollar una investigación. ¿Qué tipo de actividad están realizando?",
+      "opciones": [
+        "Una relación a distancia entre investigadores que solo se ven cuando toca corregir el artículo.",
+        "Un grupo de apoyo emocional llamado «Revisor 2, danos una oportunidad».",
+        "Colaboración científica entre investigadores e instituciones."
+      ],
+      "correcta": "C"
+    },
+    {
+      "categoria": "Ronda divertida",
+      "pregunta": "Situación: Un docente afirma que la producción académica de la UIDE solo incluye artículos publicados en revistas científicas. ¿Qué le responderías?",
+      "opciones": [
+        "Que también pueden reconocerse libros, capítulos de libros y otros productos académicos que cumplan los criterios institucionales.",
+        "Que también cuenta como producción académica sobrevivir a cinco reuniones seguidas sin que se acabe el café.",
+        "Que si subes una selfie con bata y escribes «haciendo ciencia», automáticamente te asignan un DOI."
+      ],
+      "correcta": "A"
+    },
+    {
+      "categoria": "Ronda divertida",
+      "pregunta": "Situación: Estás organizando un proyecto de investigación y un compañero pregunta quién es el responsable principal de coordinar su desarrollo y presentar los informes correspondientes. ¿Quién cumple esa función?",
+      "opciones": [
+        "El que escribió «yo me encargo» en el grupo de WhatsApp y después desapareció durante tres meses.",
+        "El Investigador Principal.",
+        "La persona que dice «hagamos una reunión cortita» y termina compartiendo 47 diapositivas."
+      ],
+      "correcta": "B"
+    },
+    {
+      "categoria": "Ronda divertida",
+      "pregunta": "Situación: Un equipo desarrolló una invención durante un proyecto de investigación y desea gestionar su protección. ¿Qué área institucional interviene en este proceso?",
+      "opciones": [
+        "El FBI, porque la fórmula es tan secreta que ni el Investigador Principal puede verla.",
+        "La abuelita del investigador, que lleva 40 años protegiendo su receta de seco de pollo sin necesidad de patente.",
+        "El Centro de Transferencia Tecnológica (CTT), de acuerdo con el procedimiento institucional."
+      ],
+      "correcta": "C"
+    },
+    {
+      "categoria": "Ronda divertida",
+      "pregunta": "Situación: Un docente publica los resultados de su investigación en una revista científica especializada para compartirlos con otros investigadores. ¿Qué está haciendo?",
+      "opciones": [
+        "Difusión científica.",
+        "Intentando conseguir que su paper tenga más visualizaciones que el video del gato que se cayó de la mesa.",
+        "Lanzando su carrera de influencer académico con el eslogan «Dale like, comparte y cítame en APA 7»."
+      ],
+      "correcta": "A"
+    },
+    {
+      "categoria": "Ronda divertida",
+      "pregunta": "Situación: Un docente de la UIDE desarrolla actividades de investigación con investigadores de una universidad extranjera, promoviendo proyectos conjuntos y el intercambio académico. ¿Qué está fortaleciendo?",
+      "opciones": [
+        "Un romance académico a distancia entre dos laboratorios que solo se comunican por Microsoft Teams.",
+        "La internacionalización de la investigación.",
+        "Un club de acumulación de millas, donde el verdadero objetivo es conseguir categoría Gold antes que un artículo Q1."
+      ],
+      "correcta": "B"
+    },
+    {
+      "categoria": "Ronda divertida",
+      "pregunta": "Situación: Un estudiante de la UIDE está desarrollando su trabajo de titulación y desea participar en actividades de investigación relacionadas con su carrera. ¿Qué tipo de investigación se busca fortalecer con esta participación?",
+      "opciones": [
+        "Investigación paranormal para descubrir por qué el tutor responde todos los correos menos el que dice «¿ya puedo defender?».",
+        "Investigación de resistencia extrema para comprobar cuántas veces se puede cambiar el título de una tesis antes de perder la paciencia.",
+        "Investigación formativa, articulada con el proceso de formación académica del estudiante."
+      ],
+      "correcta": "C"
+    },
+    {
+      "categoria": "Ronda divertida",
+      "pregunta": "Situación: Un equipo de investigadores desarrolla un proyecto cuyos resultados pueden contribuir a resolver necesidades de una comunidad. ¿Cómo puede articularse esta investigación con la sociedad?",
+      "opciones": [
+        "Vinculando los resultados de investigación con actividades y proyectos que respondan a necesidades sociales.",
+        "Crear un grupo de WhatsApp llamado «Vamos a cambiar el mundo» y archivarlo después de la primera reunión.",
+        "Imprimir el informe de 200 páginas y dejarlo sobre una mesa, esperando que la sociedad lo encuentre por intervención divina."
+      ],
+      "correcta": "A"
+    }
+  ]
+}
