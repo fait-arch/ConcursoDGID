@@ -1,18 +1,27 @@
 "use client";
 
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import Game from "./Game";
 import Setup from "./Setup";
 import { createGame, type GameState } from "@/lib/game";
-import { prepareQuestions } from "@/lib/questions";
+import { prepareQuestions, selectRound } from "@/lib/questions";
 import { clampZoom, ZOOM } from "@/lib/hooks";
 import { setMuted } from "@/lib/sound";
-import { clearSavedGame, loadPrefs, savePrefs, type SavedGame } from "@/lib/storage";
+import {
+  clearSavedGame,
+  loadPrefs,
+  loadUsedQuestions,
+  savePrefs,
+  saveUsedQuestions,
+  type SavedGame,
+} from "@/lib/storage";
 import type { Theme } from "@/lib/theme";
 import type { QuestionFile, Settings, Team } from "@/lib/types";
 
 export default function App() {
   const [game, setGame] = useState<{ state: GameState; id: number } | null>(null);
+  // Archivo de la última partida iniciada: de ahí sale la siguiente ronda.
+  const fileRef = useRef<QuestionFile | null>(null);
   const [theme, setTheme] = useState<Theme>("dark");
   const [zoom, setZoom] = useState(1);
 
@@ -71,9 +80,17 @@ export default function App() {
 
   const play = (state: GameState) => setGame((g) => ({ state, id: (g?.id ?? 0) + 1 }));
 
+  /** Arma una ronda nueva: preguntas al azar que no hayan salido en rondas anteriores. */
+  const startRound = (file: QuestionFile, teams: [Team, Team], settings: Settings) => {
+    const round = selectRound(file.questions, settings, loadUsedQuestions(file.source));
+    saveUsedQuestions(file.source, round.used);
+    play(createGame({ title: file.title, questions: round.questions, teams, settings }));
+  };
+
   const start = (file: QuestionFile, teams: [Team, Team], settings: Settings) => {
     clearSavedGame();
-    play(createGame({ title: file.title, questions: prepareQuestions(file.questions, settings), teams, settings }));
+    fileRef.current = file;
+    startRound(file, teams, settings);
   };
 
   const resume = (saved: SavedGame) => {
@@ -92,6 +109,12 @@ export default function App() {
 
   const replay = (prev: GameState) => {
     clearSavedGame();
+    const file = fileRef.current;
+    if (file) {
+      startRound(file, prev.teams, prev.settings);
+      return;
+    }
+    // Partida reanudada: sin el archivo original solo se pueden repetir sus preguntas.
     play(
       createGame({
         title: prev.title,

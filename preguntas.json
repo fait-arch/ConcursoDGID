@@ -6,7 +6,8 @@
     "puntos": 100,
     "puntosMinimos": 0.5,
     "factorRebote": 1,
-    "mezclar": false
+    "mezclar": false,
+    "preguntasPorRonda": 5
   },
   "equipos": [
     { "nombre": "Equipo Coral", "color": "#FF5A4A", "tecla": "A" },

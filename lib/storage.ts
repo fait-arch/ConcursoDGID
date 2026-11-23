@@ -3,6 +3,7 @@ import type { Question, Settings, Team } from "./types";
 
 const GAME_KEY = "concurso:partida";
 const PREFS_KEY = "concurso:preferencias";
+const USED_KEY = "concurso:preguntas-jugadas";
 
 export interface SavedGame {
   savedAt: number;
@@ -68,6 +69,26 @@ export function loadSavedGame(): SavedGame | null {
 
 export function clearSavedGame() {
   write(GAME_KEY, null);
+}
+
+/** Preguntas ya jugadas en rondas anteriores del mismo archivo. */
+interface UsedQuestions {
+  source: string;
+  keys: string[];
+}
+
+export function loadUsedQuestions(source: string): string[] {
+  const u = read<UsedQuestions>(USED_KEY);
+  // Al cambiar de archivo se empieza de cero.
+  return u && u.source === source && Array.isArray(u.keys) ? u.keys : [];
+}
+
+export function saveUsedQuestions(source: string, keys: string[]) {
+  write(USED_KEY, { source, keys } satisfies UsedQuestions);
+}
+
+export function clearUsedQuestions() {
+  write(USED_KEY, null);
 }
 
 export function loadPrefs(): Prefs {

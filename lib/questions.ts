@@ -8,6 +8,7 @@ export const DEFAULT_SETTINGS: Settings = {
   minFactor: 0.5,
   reboundFactor: 1,
   shuffle: false,
+  perRound: 5,
 };
 
 export const DEFAULT_TEAMS: Team[] = [
@@ -149,6 +150,9 @@ export function parseQuestionFile(text: string, source: string): QuestionFile {
     minFactor: fraction(pick(cfg, "puntosMinimos", "puntosMínimos")) ?? DEFAULT_SETTINGS.minFactor,
     reboundFactor: fraction(pick(cfg, "factorRebote")) ?? DEFAULT_SETTINGS.reboundFactor,
     shuffle: pick(cfg, "mezclar") === true,
+    perRound: Math.round(
+      num(pick(cfg, "preguntasPorRonda", "preguntasRonda", "porRonda"), 0, 100000) ?? DEFAULT_SETTINGS.perRound,
+    ),
   };
 
   const rawTeams = pick(root, "equipos", "teams");
@@ -202,6 +206,64 @@ export function prepareQuestions(raw: RawQuestion[], s: Settings): Question[] {
     }
   }
   return qs;
+}
+
+/** Identifica una pregunta entre rondas, para no repetirla. */
+export const questionKey = (q: { text: string }) => q.text.trim().toLowerCase();
+
+/** Preguntas del archivo que todavía no han salido en ninguna ronda. */
+export function unplayedCount(raw: RawQuestion[], used: string[]): number {
+  const seen = new Set(used);
+  return raw.filter((q) => !seen.has(questionKey(q))).length;
+}
+
+/** Cuántas preguntas se juegan en una ronda con esta configuración. */
+export function roundSize(total: number, s: Settings): number {
+  return s.perRound > 0 ? Math.min(s.perRound, total) : total;
+}
+
+function shuffledCopy<T>(items: T[]): T[] {
+  const a = items.slice();
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
+export interface Round {
+  questions: Question[];
+  /** Claves de todas las preguntas ya jugadas, incluidas las de esta ronda. */
+  used: string[];
+  /** true si se agotaron las preguntas sin jugar y el ciclo vuelve a empezar. */
+  cycled: boolean;
+}
+
+/**
+ * Elige al azar las preguntas de una ronda evitando las de las rondas anteriores:
+ * con 5 por ronda, la segunda ronda trae otras 5. Cuando ya no quedan suficientes
+ * sin jugar se completa la ronda con las que menos falta hacen y el ciclo empieza
+ * de nuevo, así que nunca se repite una pregunta antes de haber pasado por todas.
+ */
+export function selectRound(raw: RawQuestion[], s: Settings, used: string[] = []): Round {
+  const n = roundSize(raw.length, s);
+  const seen = new Set(used);
+  const all = raw.map((_, i) => i);
+  const fresh = shuffledCopy(all.filter((i) => !seen.has(questionKey(raw[i]))));
+  const played = shuffledCopy(all.filter((i) => seen.has(questionKey(raw[i]))));
+  const cycled = fresh.length < n;
+  const chosen = [...fresh, ...played].slice(0, n);
+  // Sin "mezclar", la ronda sigue el orden del archivo: la elección ya fue al azar.
+  if (!s.shuffle) chosen.sort((a, b) => a - b);
+  const keys = chosen.map((i) => questionKey(raw[i]));
+  return {
+    questions: prepareQuestions(
+      chosen.map((i) => raw[i]),
+      { ...s, shuffle: false },
+    ),
+    used: cycled ? keys : [...used, ...keys],
+    cycled,
+  };
 }
 
 export const optionLetter = (i: number) => LETTERS[i] ?? String(i + 1);

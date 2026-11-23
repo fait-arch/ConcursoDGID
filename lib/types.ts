@@ -19,6 +19,8 @@ export interface Settings {
   /** Fracción del bote que gana el equipo que acierta en el rebote (0–1). */
   reboundFactor: number;
   shuffle: boolean;
+  /** Preguntas que se juegan en cada ronda; 0 = todas las del archivo. */
+  perRound: number;
 }
 
 /** Pregunta tal como se lee del JSON, con tiempos opcionales. */

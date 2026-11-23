@@ -561,6 +561,10 @@ button {
 .field input::-webkit-inner-spin-button {
   appearance: none;
 }
+.field input:disabled {
+  color: var(--md-sys-color-on-surface-variant);
+  opacity: 0.38;
+}
 .field-suffix {
   color: var(--md-sys-color-on-surface-variant);
   font-size: calc(16 * var(--dp));
@@ -1514,8 +1518,9 @@ kbd {
 }
 .settings {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  gap: var(--space-16);
+  gap: var(--space-12) var(--space-16);
 }
 .settings .field {
   width: calc(164 * var(--dp));

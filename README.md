@@ -84,7 +84,7 @@ La interfaz sigue Material Design 3, el sistema de diseño de Google:
 
 ## Cómo se juega
 
-1. **Configuración.** Revisa nombres, colores y pulsadores. Pulsa la tecla de cada equipo para probarla: su mitad de la pantalla se ilumina. «Cambiar pulsador» acepta cualquier tecla, incluidos los pulsadores USB que se presentan como teclado.
+1. **Configuración.** Elige cuántas **preguntas por ronda** (5 por defecto): se sacan al azar del archivo y la ronda siguiente trae otras distintas, sin repetir ninguna hasta agotarlas. Revisa nombres, colores y pulsadores. Pulsa la tecla de cada equipo para probarla: su mitad de la pantalla se ilumina. «Cambiar pulsador» acepta cualquier tecla, incluidos los pulsadores USB que se presentan como teclado.
 2. **Pregunta.** Aparece el número de pregunta; el moderador pulsa **Espacio** para lanzarla. Empieza la cuenta atrás y los pulsadores se activan.
 3. **Pulsación.** El primer equipo que pulsa bloquea al rival y la pantalla se llena de su color. El bote de puntos se congela en ese instante: cuanto antes se pulsa, más vale (del 100 % al mínimo configurado).
 4. **Veredicto.**
@@ -94,7 +94,9 @@ La interfaz sigue Material Design 3, el sistema de diseño de Google:
    - **Acierto:** el equipo suma el bote (confeti en su color).
    - **Fallo:** emojis que salen disparados de la pantalla y la pregunta rebota al otro equipo, con su propio tiempo para responder. Si acierta, se lleva el bote.
    - **Desierta:** si nadie pulsa a tiempo o fallan los dos, cactus y grillos cruzan la pantalla y nadie suma.
-6. **Final.** Tras la última pregunta, redoble y podio animado. Gana quien tenga más puntos; si empatan, el de menor tiempo medio de respuesta.
+6. **Final.** Tras la última pregunta de la ronda, redoble y podio animado. Gana quien tenga más puntos; si empatan, el de menor tiempo medio de respuesta. **Jugar de nuevo** arranca otra ronda con preguntas nuevas.
+
+La pantalla de inicio indica cuántas preguntas quedan sin jugar y **Reiniciar jugadas** las devuelve todas al sorteo. Al cambiar de archivo de preguntas la cuenta empieza de cero.
 
 ## Teclas del moderador
 
@@ -129,7 +131,8 @@ Está en la raíz del proyecto y se vuelve a leer cada vez que se abre la pantal
     "puntos": 100,
     "puntosMinimos": 0.5,
     "factorRebote": 1,
-    "mezclar": false
+    "mezclar": false,
+    "preguntasPorRonda": 5
   },
   "equipos": [
     { "nombre": "Equipo Coral", "color": "#FF5A4A", "tecla": "A" },
@@ -162,7 +165,8 @@ Está en la raíz del proyecto y se vuelve a leer cada vez que se abre la pantal
 | `puntos` | Puntos máximos de cada pregunta | 100 |
 | `puntosMinimos` | Parte de los puntos garantizada aunque se pulse al final (0,5 = 50 %) | 0.5 |
 | `factorRebote` | Parte del bote que gana quien acierta en el rebote (1 = todo) | 1 |
-| `mezclar` | Barajar el orden de las preguntas | false |
+| `mezclar` | Barajar el orden de las preguntas dentro de la ronda | false |
+| `preguntasPorRonda` | Cuántas preguntas se juegan en cada ronda, elegidas al azar (`0` = todas) | 5 |
 
 **Equipos** (opcional): `nombre`, `color` en hexadecimal y `tecla`. La tecla puede ser una letra o número (`"A"`, `"7"`) o un código de teclado como `"ShiftLeft"` o `"ShiftRight"`. No se pueden usar las del moderador: Espacio, Enter, C, X, Z, P, S, M, F, H, T, 1–6 ni las del zoom (− + 0).
 

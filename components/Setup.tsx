@@ -5,9 +5,22 @@ import Icon from "./Icon";
 import { points } from "@/lib/format";
 import { toggleFullscreen } from "@/lib/hooks";
 import { keyLabel, RESERVED_KEYS } from "@/lib/keys";
-import { DEFAULT_SETTINGS, DEFAULT_TEAMS, parseQuestionFile, TEAM_COLORS } from "@/lib/questions";
+import {
+  DEFAULT_SETTINGS,
+  DEFAULT_TEAMS,
+  parseQuestionFile,
+  roundSize,
+  TEAM_COLORS,
+  unplayedCount,
+} from "@/lib/questions";
 import { sfx, unlockAudio } from "@/lib/sound";
-import { clearSavedGame, loadSavedGame, type SavedGame } from "@/lib/storage";
+import {
+  clearSavedGame,
+  clearUsedQuestions,
+  loadSavedGame,
+  loadUsedQuestions,
+  type SavedGame,
+} from "@/lib/storage";
 import { teamPalette, teamVars, type Theme } from "@/lib/theme";
 import type { QuestionFile, Settings, Team, TeamId } from "@/lib/types";
 
@@ -49,6 +62,7 @@ export default function Setup({ theme, onStart, onResume, onToggleTheme }: Props
   const [bindError, setBindError] = useState<string | null>(null);
   const [flash, setFlash] = useState<[number, number]>([0, 0]);
   const [saved, setSaved] = useState<SavedGame | null>(null);
+  const [used, setUsed] = useState<string[]>([]);
   const [dragging, setDragging] = useState(false);
   const [showKeys, setShowKeys] = useState(false);
   const fileInput = useRef<HTMLInputElement>(null);
@@ -57,6 +71,7 @@ export default function Setup({ theme, onStart, onResume, onToggleTheme }: Props
     setLoad({ status: "ok", file });
     setTeams([file.teams[0], file.teams[1]]);
     setSettings(file.settings);
+    setUsed(loadUsedQuestions(file.source));
   }, []);
 
   const fetchFile = useCallback(async () => {
@@ -196,6 +211,10 @@ export default function Setup({ theme, onStart, onResume, onToggleTheme }: Props
   const file = load.status === "ok" ? load.file : null;
   const customTimes = file?.questions.some((q) => q.buzzTime !== undefined || q.answerTime !== undefined);
   const openCount = file?.questions.filter((q) => q.options.length === 0).length ?? 0;
+  const total = file?.questions.length ?? 0;
+  const perRound = total ? roundSize(total, settings) : settings.perRound || DEFAULT_SETTINGS.perRound;
+  const unplayed = file ? unplayedCount(file.questions, used) : 0;
+  const played = total - unplayed;
 
   return (
     <div className="setup" style={vars}>
@@ -316,11 +335,17 @@ export default function Setup({ theme, onStart, onResume, onToggleTheme }: Props
               {load.status === "loading" && <p className="title-medium">Leyendo preguntas.json…</p>}
               {load.status === "ok" && (
                 <>
-                  <p className="title-medium">{load.file.questions.length} preguntas</p>
+                  <p className="title-medium">
+                    {load.file.questions.length} preguntas · {perRound} por ronda
+                  </p>
                   <p className="body-medium on-surface-variant">
                     Cargadas de {load.file.source}
                     {openCount > 0 && `, ${openCount} de respuesta abierta`}.
                     {customTimes && " Las que tienen tiempo propio lo conservan."}
+                    {played > 0 &&
+                      (unplayed > 0
+                        ? ` Ya han salido ${played}: quedan ${unplayed} sin jugar.`
+                        : " Ya han salido todas: la próxima ronda empieza el ciclo de nuevo.")}
                   </p>
                 </>
               )}
@@ -332,6 +357,20 @@ export default function Setup({ theme, onStart, onResume, onToggleTheme }: Props
               )}
             </div>
             <div className="source-actions">
+              {played > 0 && (
+                <button
+                  type="button"
+                  className="btn btn-text state"
+                  data-tip="Vuelven a entrar todas en el sorteo"
+                  onClick={() => {
+                    clearUsedQuestions();
+                    setUsed([]);
+                  }}
+                >
+                  <Icon name="restart_alt" />
+                  Reiniciar jugadas
+                </button>
+              )}
               <button type="button" className="btn btn-text state" onClick={() => void fetchFile()}>
                 <Icon name="refresh" />
                 Volver a leer
@@ -355,6 +394,23 @@ export default function Setup({ theme, onStart, onResume, onToggleTheme }: Props
           </div>
           <div className="divider" />
           <div className="settings">
+            <label className="field">
+              <span className="field-label">Preguntas por ronda</span>
+              <input
+                type="number"
+                size={1}
+                min={1}
+                max={total || undefined}
+                disabled={!total}
+                value={perRound}
+                onChange={(e) =>
+                  setSettings({
+                    ...settings,
+                    perRound: Math.min(total || 9999, Math.max(1, Math.round(Number(e.target.value) || 1))),
+                  })
+                }
+              />
+            </label>
             <label className="field">
               <span className="field-label">Tiempo para pulsar</span>
               <input
@@ -394,6 +450,12 @@ export default function Setup({ theme, onStart, onResume, onToggleTheme }: Props
               Mezclar preguntas
             </button>
           </div>
+          <p className="supporting body-small on-surface-variant">
+            Cada ronda saca {perRound} {perRound === 1 ? "pregunta" : "preguntas"} al azar
+            {total > perRound ? ` de las ${total}` : ""} y no las repite en las rondas siguientes hasta
+            agotarlas. «Mezclar preguntas» además desordena las de la ronda; sin marcarlo salen en el
+            orden del archivo.
+          </p>
         </section>
 
         <div className="setup-actions span-12">
