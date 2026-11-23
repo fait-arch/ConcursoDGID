@@ -6,7 +6,7 @@
     "puntos": 100,
     "puntosMinimos": 0.5,
     "factorRebote": 1,
-    "mezclar": false,
+    "mezclar": true,
     "preguntasPorRonda": 5
   },
   "equipos": [
@@ -22,7 +22,7 @@
         "Comprar directamente y luego avisar a Finanzas.",
         "Solicitar el dinero directamente a Contraloría."
       ],
-      "correcta": "A"
+      "correcta": 1
     },
     {
       "categoria": "Fondos concursables internos",
@@ -32,7 +32,7 @@
         "Anexo D – Monitoreo.",
         "Anexo E – Cierre."
       ],
-      "correcta": "B"
+      "correcta": 2
     },
     {
       "categoria": "Fondos concursables internos",
@@ -42,7 +42,7 @@
         "Esperar hasta el cierre del proyecto para presentar los comprobantes.",
         "Enviar a la DGI el formato de justificación, el memorándum de cumplimiento de la actividad y los comprobantes requeridos, dentro de los 30 días posteriores al gasto."
       ],
-      "correcta": "C"
+      "correcta": 3
     },
     {
       "categoria": "Fondos concursables internos",
@@ -52,7 +52,7 @@
         "Presentar solamente el presupuesto inicial.",
         "Esperar hasta que termine el proyecto para informar sus avances."
       ],
-      "correcta": "A"
+      "correcta": 1
     },
     {
       "categoria": "Fondos concursables internos",
@@ -62,7 +62,7 @@
         "Presentar la solicitud a la DGI para que gestione la contratación.",
         "Solicitarlo únicamente a Finanzas."
       ],
-      "correcta": "B"
+      "correcta": 2
     },
     {
       "categoria": "Fondos concursables internos",
@@ -72,7 +72,7 @@
         "Consultando solamente el último gasto.",
         "Restando los gastos realizados del presupuesto total asignado."
       ],
-      "correcta": "C"
+      "correcta": 3
     },
     {
       "categoria": "Fondos concursables internos",
@@ -82,7 +82,7 @@
         "Añadirlo sin comunicar el cambio.",
         "Esperar hasta presentar el cierre del proyecto."
       ],
-      "correcta": "A"
+      "correcta": 1
     },
     {
       "categoria": "Fondos concursables internos",
@@ -92,7 +92,7 @@
         "El Anexo E completo, evidencias de actividades y resultados, productos generados e información final de ejecución presupuestaria.",
         "Únicamente las facturas de las actividades."
       ],
-      "correcta": "B"
+      "correcta": 2
     },
     {
       "categoria": "Fondos concursables internos",
@@ -102,7 +102,7 @@
         "A nombre del proveedor que realizó la venta.",
         "A nombre del Investigador Principal, incluyendo los datos correspondientes."
       ],
-      "correcta": "C"
+      "correcta": 3
     },
     {
       "categoria": "Fondos concursables internos",
@@ -112,7 +112,7 @@
         "Realizar el gasto directamente y justificarlo después.",
         "Solicitar un incremento automático del presupuesto."
       ],
-      "correcta": "A"
+      "correcta": 1
     },
     {
       "categoria": "Fondos concursables internos",
@@ -122,7 +122,7 @@
         "Las actividades planificadas y los gastos estimados para la ejecución del proyecto.",
         "Solamente los gastos de contratación de personal."
       ],
-      "correcta": "B"
+      "correcta": 2
     },
     {
       "categoria": "Fondos concursables internos",
@@ -132,7 +132,7 @@
         "Hasta USD 50 diarios, incluido IVA.",
         "Hasta USD 25 diarios, incluido IVA."
       ],
-      "correcta": "C"
+      "correcta": 3
     },
     {
       "categoria": "Fondos concursables internos",
@@ -142,7 +142,7 @@
         "USD 100 diarios, incluido IVA.",
         "USD 50 diarios, incluido IVA."
       ],
-      "correcta": "A"
+      "correcta": 1
     },
     {
       "categoria": "Fondos concursables internos",
@@ -152,7 +152,7 @@
         "La DGI rechaza el gasto porque no consta en el presupuesto aprobado.",
         "Finanzas incrementa automáticamente el presupuesto del proyecto."
       ],
-      "correcta": "B"
+      "correcta": 2
     },
     {
       "categoria": "Fondos concursables internos",
@@ -162,7 +162,7 @@
         "Exclusivamente al Investigador Principal.",
         "A la UIDE y puede ser utilizados por otros investigadores."
       ],
-      "correcta": "C"
+      "correcta": 3
     },
     {
       "categoria": "Fondos concursables internos",
@@ -172,7 +172,7 @@
         "Solicitar al proveedor que facture a nombre del investigador.",
         "Comprar directamente el software y posteriormente informar a la DGI."
       ],
-      "correcta": "A"
+      "correcta": 1
     },
     {
       "categoria": "Fondos concursables internos",
@@ -182,7 +182,7 @@
         "Con al menos 15 días de anticipación a la fecha del viaje.",
         "Después de realizar el viaje."
       ],
-      "correcta": "B"
+      "correcta": 2
     },
     {
       "categoria": "Fondos concursables internos",
@@ -192,7 +192,7 @@
         "Una factura electrónica con los datos del Investigador Principal y los requisitos correspondientes.",
         "Una factura emitida a consumidor final."
       ],
-      "correcta": "C"
+      "correcta": 3
     },
     {
       "categoria": "Fondos concursables internos",
@@ -202,7 +202,7 @@
         "La factura se acepta sin ninguna revisión adicional.",
         "El reembolso se realiza automáticamente."
       ],
-      "correcta": "A"
+      "correcta": 1
     },
     {
       "categoria": "Fondos concursables internos",
@@ -212,7 +212,7 @@
         "Devolver o depositar el excedente y adjuntar el comprobante correspondiente a la justificación de gastos.",
         "Incorporarlo automáticamente al presupuesto de otro proyecto."
       ],
-      "correcta": "B"
+      "correcta": 2
     },
     {
       "categoria": "Registro de publicaciones",
@@ -222,7 +222,7 @@
         "Del día 15 de un mes al día 15 del siguiente.",
         "Únicamente durante diciembre."
       ],
-      "correcta": "B"
+      "correcta": 2
     },
     {
       "categoria": "Registro de publicaciones",
@@ -232,7 +232,7 @@
         "Hasta el día 20 de cada mes.",
         "Hasta el último día del año."
       ],
-      "correcta": "B"
+      "correcta": 2
     },
     {
       "categoria": "Registro de publicaciones",
@@ -242,7 +242,7 @@
         "La publicación se asigna a un bloque de evaluación según la fecha de recepción de la documentación completa y se evalúa durante el mes siguiente a dicho bloque.",
         "Todas las publicaciones se evalúan únicamente al finalizar el año."
       ],
-      "correcta": "B"
+      "correcta": 2
     },
     {
       "categoria": "Convocatoria APC 2026",
@@ -252,7 +252,7 @@
         "Hasta el día 25.",
         "Hasta el día 10."
       ],
-      "correcta": "C"
+      "correcta": 3
     },
     {
       "categoria": "Convocatoria APC 2026",
@@ -262,7 +262,7 @@
         "Ser cualquier revista que cobre por publicar.",
         "Tener únicamente presencia en redes sociales."
       ],
-      "correcta": "A"
+      "correcta": 1
     },
     {
       "categoria": "Convocatoria APC 2026",
@@ -272,7 +272,7 @@
         "Máximo tres solicitudes por docente o investigador durante 2026.",
         "No existe límite de solicitudes."
       ],
-      "correcta": "B"
+      "correcta": 2
     },
     {
       "categoria": "Convocatoria APC 2026",
@@ -282,7 +282,7 @@
         "El Anexo A, el Anexo B, la carta o correo oficial de aceptación del artículo, el manuscrito final aceptado y los demás documentos habilitantes que correspondan.",
         "Solamente la carta de aceptación del artículo y la factura de publicación."
       ],
-      "correcta": "B"
+      "correcta": 2
     },
     {
       "categoria": "Convocatoria APC 2026",
@@ -292,7 +292,7 @@
         "Ser el primer autor o autor de correspondencia, contar con la filiación UIDE correctamente registrada, tener el artículo aceptado en una revista elegible y presentar la documentación requerida, incluida la factura o invoice a nombre del docente cuando corresponda al reembolso.",
         "Presentar únicamente la carta de aceptación del artículo, sin necesidad de verificar la indexación, la filiación institucional ni los requisitos de la convocatoria."
       ],
-      "correcta": "B"
+      "correcta": 2
     },
     {
       "categoria": "Producción académica",
@@ -302,7 +302,7 @@
         "Reunir los documentos habilitantes, registrar la publicación en SADUI y enviar la documentación correspondiente al correo publicaciones@uide.edu.ec.",
         "Registrar el artículo en SADUI y esperar su validación sin enviar los documentos habilitantes."
       ],
-      "correcta": "B"
+      "correcta": 2
     },
     {
       "categoria": "Producción académica",
@@ -312,7 +312,7 @@
         "Únicamente una captura de pantalla del título del artículo.",
         "Un certificado de asistencia a un congreso."
       ],
-      "correcta": "A"
+      "correcta": 1
     },
     {
       "categoria": "Producción académica",
@@ -322,7 +322,7 @@
         "La primera página del capítulo, portada y contraportada del libro, índice, sección donde conste el autor o coautor, filiación UIDE, año de publicación, consejo editorial o auspicio institucional, código ISBN y evidencia de revisión por pares externos.",
         "Solamente el archivo PDF del capítulo y una carta de aceptación de la editorial."
       ],
-      "correcta": "B"
+      "correcta": 2
     },
     {
       "categoria": "Producción académica",
@@ -332,7 +332,7 @@
         "El archivo PDF del libro y una carta de aceptación de la editorial.",
         "La portada y contraportada, índice, sección donde conste el autor o coautor, filiación UIDE, año de publicación, consejo editorial o auspicio institucional, código ISBN y evidencia de revisión por pares externos."
       ],
-      "correcta": "C"
+      "correcta": 3
     },
     {
       "categoria": "Producción académica",
@@ -342,7 +342,7 @@
         "El registro emitido por el Servicio Nacional de Derechos Intelectuales (SENADI) y el enlace de acceso al registro, cuando aplique.",
         "Una presentación del proyecto y un certificado de participación en investigación."
       ],
-      "correcta": "B"
+      "correcta": 2
     },
     {
       "categoria": "Fondo de Productividad Académica",
@@ -352,7 +352,7 @@
         "Hasta el 5 de diciembre de 2026.",
         "Hasta el 15 de enero de 2027."
       ],
-      "correcta": "B"
+      "correcta": 2
     },
     {
       "categoria": "Fondo de Productividad Académica",
@@ -362,7 +362,7 @@
         "Gastos personales sin relación con actividades académicas.",
         "Compra de artículos personales que no estén relacionados con investigación."
       ],
-      "correcta": "A"
+      "correcta": 1
     },
     {
       "categoria": "Fondo de Productividad Académica",
@@ -372,7 +372,7 @@
         "Pago directo de todos los gastos, sin presentar respaldos.",
         "Reembolso, mediante la presentación de la documentación de respaldo correspondiente."
       ],
-      "correcta": "C"
+      "correcta": 3
     },
     {
       "categoria": "Fondo de Productividad Académica",
@@ -382,7 +382,7 @@
         "Gestionar estos gastos mediante los procesos institucionales específicos, ya que no se realizan bajo la modalidad de reembolso.",
         "Utilizar el Fondo sin solicitar ningún trámite institucional."
       ],
-      "correcta": "B"
+      "correcta": 2
     },
     {
       "categoria": "Fondo de Productividad Académica",
@@ -392,7 +392,7 @@
         "Puedes utilizarlo durante enero del siguiente año sin autorización.",
         "Los saldos no utilizados después del 5 de diciembre de 2026 no podrán ejecutarse."
       ],
-      "correcta": "C"
+      "correcta": 3
     },
     {
       "categoria": "Proyectos doctorales",
@@ -402,7 +402,7 @@
         "Registro de Grupo de Investigación.",
         "Registro de Centro de Investigación."
       ],
-      "correcta": "A"
+      "correcta": 1
     },
     {
       "categoria": "Proyectos doctorales",
@@ -412,7 +412,7 @@
         "Programa de doctorado, universidad, título por obtener, tutor o director de tesis, correo del tutor/director y código de investigador SENESCYT.",
         "Solamente el programa doctoral y la fecha de graduación."
       ],
-      "correcta": "B"
+      "correcta": 2
     },
     {
       "categoria": "Proyectos doctorales",
@@ -422,7 +422,7 @@
         "Solamente el título de la tesis y el nombre de la universidad.",
         "Título del proyecto doctoral, línea de investigación UIDE, fechas de ejecución, resumen y palabras clave, ODS e impactos, cronograma y productos esperados."
       ],
-      "correcta": "C"
+      "correcta": 3
     },
     {
       "categoria": "Proyectos doctorales",
@@ -432,7 +432,7 @@
         "El cronograma de cualquier proyecto de investigación registrado en la UIDE.",
         "Un cronograma elaborado por el investigador, con fechas establecidas libremente y sin necesidad de aprobación."
       ],
-      "correcta": "A"
+      "correcta": 1
     },
     {
       "categoria": "Proyectos doctorales",
@@ -442,7 +442,7 @@
         "Verificar que el proyecto esté aprobado por el tutor o director de tesis, completar la plantilla con la información del proyecto doctoral, enviar la documentación para revisión institucional y esperar a que la DGID realice y mantenga el registro.",
         "Solicitar el registro directamente a la universidad donde cursas el doctorado, sin presentar documentación a la DGID."
       ],
-      "correcta": "B"
+      "correcta": 2
     },
     {
       "categoria": "Proyectos doctorales",
@@ -452,7 +452,7 @@
         "Registrar únicamente las publicaciones y eliminar los demás avances.",
         "Mantener actualizada la información del período de ejecución, cronograma, estado del proyecto y productos derivados."
       ],
-      "correcta": "C"
+      "correcta": 3
     },
     {
       "categoria": "Centros de Investigación",
@@ -462,7 +462,7 @@
         "Únicamente una propuesta de investigación y un presupuesto.",
         "Registro de Grupo de Investigación y acta de elección del coordinador."
       ],
-      "correcta": "A"
+      "correcta": 1
     },
     {
       "categoria": "Centros de Investigación",
@@ -472,7 +472,7 @@
         "Registro de Centro de Investigación.",
         "Registro de Grupo de Investigación."
       ],
-      "correcta": "B"
+      "correcta": 2
     },
     {
       "categoria": "Centros de Investigación",
@@ -482,7 +482,7 @@
         "Registrar directamente el Centro de Investigación sin definir previamente su estructura ni presentar documentación.",
         "Definir los miembros, dirección, temática, líneas de investigación y estructura del Centro; preparar la solicitud y los documentos requeridos; pasar por la revisión de la DGID y, si la solicitud es favorable, formalizar la aprobación y asignar el registro."
       ],
-      "correcta": "C"
+      "correcta": 3
     },
     {
       "categoria": "Centros de Investigación",
@@ -492,7 +492,7 @@
         "30 días calendario.",
         "5 días calendario."
       ],
-      "correcta": "A"
+      "correcta": 1
     },
     {
       "categoria": "Grupos y Redes de Investigación",
@@ -502,7 +502,7 @@
         "Memorando de solicitud, Registro de Grupo de Investigación, hojas de vida y acta de elección del coordinador.",
         "Registro de Centro de Investigación y memorando de designación del directorio."
       ],
-      "correcta": "B"
+      "correcta": 2
     },
     {
       "categoria": "Grupos y Redes de Investigación",
@@ -512,7 +512,7 @@
         "Esperar hasta el cierre del Grupo de Investigación para notificar los cambios.",
         "Comunicar las modificaciones a la DGID dentro de los tiempos que correspondan, para mantener actualizada la información del grupo."
       ],
-      "correcta": "C"
+      "correcta": 3
     },
     {
       "categoria": "Grupos y Redes de Investigación",
@@ -522,7 +522,7 @@
         "Únicamente los nombres de los integrantes y del coordinador.",
         "Solamente las publicaciones científicas generadas por el grupo."
       ],
-      "correcta": "A"
+      "correcta": 1
     },
     {
       "categoria": "Grupos y Redes de Investigación",
@@ -532,7 +532,7 @@
         "Corregir las observaciones y entregar la información actualizada dentro de 10 días calendario.",
         "Iniciar las actividades del grupo sin atender las observaciones."
       ],
-      "correcta": "B"
+      "correcta": 2
     },
     {
       "categoria": "Grupos y Redes de Investigación",
@@ -542,7 +542,7 @@
         "Registrar únicamente el nombre de la red cuando finalice tu participación.",
         "Verificar la información de la red, registrar la participación institucional y conservar los respaldos correspondientes."
       ],
-      "correcta": "C"
+      "correcta": 3
     },
     {
       "categoria": "Grupos y Redes de Investigación",
@@ -552,7 +552,7 @@
         "Ser un estudiante de pregrado que participe en el grupo.",
         "Ser un investigador externo designado directamente por la DGI."
       ],
-      "correcta": "A"
+      "correcta": 1
     },
     {
       "categoria": "Grupos y Redes de Investigación",
@@ -562,7 +562,7 @@
         "Solicitar la modificación con el acuerdo colectivo de los integrantes y obtener la aprobación institucional.",
         "Esperar al cierre del Grupo para informar el cambio."
       ],
-      "correcta": "B"
+      "correcta": 2
     },
     {
       "categoria": "Grupos y Redes de Investigación",
@@ -572,7 +572,7 @@
         "Solicitar automáticamente su transformación en Centro de Investigación.",
         "Restablecer su estructura dentro del plazo establecido, que puede ser de hasta 15 días calendario."
       ],
-      "correcta": "C"
+      "correcta": 3
     },
     {
       "categoria": "Grupos y Redes de Investigación",
@@ -582,7 +582,7 @@
         "Esperar hasta finalizar la participación en la red para informar el cambio.",
         "Eliminar el registro anterior sin guardar información."
       ],
-      "correcta": "A"
+      "correcta": 1
     },
     {
       "categoria": "Semilleros de Investigación",
@@ -592,7 +592,7 @@
         "Estudiantes que desarrollan actividades de investigación, con el acompañamiento académico de docentes e investigadores.",
         "Exclusivamente investigadores externos a la universidad."
       ],
-      "correcta": "B"
+      "correcta": 2
     },
     {
       "categoria": "Conceptos clave",
@@ -602,7 +602,7 @@
         "El ISBN identifica revistas científicas y el ISSN identifica libros.",
         "Ambos códigos se utilizan exclusivamente para identificar artículos científicos."
       ],
-      "correcta": "A"
+      "correcta": 1
     },
     {
       "categoria": "Conceptos clave",
@@ -612,7 +612,7 @@
         "ISBN.",
         "ORCID."
       ],
-      "correcta": "B"
+      "correcta": 2
     },
     {
       "categoria": "Conceptos clave",
@@ -622,7 +622,7 @@
         "Seis autores UIDE.",
         "Cuatro autores UIDE."
       ],
-      "correcta": "C"
+      "correcta": 3
     },
     {
       "categoria": "Conceptos clave",
@@ -632,7 +632,7 @@
         "Difusión científica.",
         "Registro de producción académica."
       ],
-      "correcta": "A"
+      "correcta": 1
     },
     {
       "categoria": "Conceptos clave",
@@ -642,7 +642,7 @@
         "Educación y Cultura; Innovación y Desarrollo Tecnológico.",
         "Contabilidad Financiera; Administración de Empresas."
       ],
-      "correcta": "B"
+      "correcta": 2
     },
     {
       "categoria": "Conceptos clave",
@@ -652,7 +652,7 @@
         "Un sistema utilizado únicamente para solicitar financiamiento de proyectos.",
         "Un identificador digital único y persistente que permite distinguir a un investigador y vincularlo con sus contribuciones académicas."
       ],
-      "correcta": "C"
+      "correcta": 3
     },
     {
       "categoria": "Equipo DGID",
@@ -662,7 +662,7 @@
         "Natalia Romero Sandoval.",
         "Andrea Pacheco Barzallo."
       ],
-      "correcta": "A"
+      "correcta": 1
     },
     {
       "categoria": "Objetivos de Desarrollo Sostenible",
@@ -672,7 +672,7 @@
         "ODS 13 – Acción por el clima.",
         "ODS 3 – Salud y bienestar."
       ],
-      "correcta": "B"
+      "correcta": 2
     },
     {
       "categoria": "Conceptos clave",
@@ -682,7 +682,7 @@
         "Red de Educación Multidisciplinaria y Cooperación Internacional.",
         "Red Ecuatoriana de Mujeres Científicas."
       ],
-      "correcta": "C"
+      "correcta": 3
     },
     {
       "categoria": "Difusión y divulgación",
@@ -692,7 +692,7 @@
         "Transformar exclusivamente los conocimientos científicos en contenidos recreativos para públicos infantiles.",
         "Gestionar únicamente la organización de eventos institucionales."
       ],
-      "correcta": "A"
+      "correcta": 1
     },
     {
       "categoria": "Equipo DGID",
@@ -702,7 +702,7 @@
         "Liosday Landaburo.",
         "Juan Francisco Nicolalde."
       ],
-      "correcta": "B"
+      "correcta": 2
     },
     {
       "categoria": "Objetivos de Desarrollo Sostenible",
@@ -712,7 +712,7 @@
         "ODS 10 – Reducción de las desigualdades.",
         "ODS 4 – Educación de calidad."
       ],
-      "correcta": "C"
+      "correcta": 3
     },
     {
       "categoria": "Objetivos de Desarrollo Sostenible",
@@ -722,7 +722,7 @@
         "ODS 13 – Acción por el clima.",
         "ODS 11 – Ciudades y comunidades sostenibles."
       ],
-      "correcta": "A"
+      "correcta": 1
     },
     {
       "categoria": "Difusión y divulgación",
@@ -732,7 +732,7 @@
         "Brief de difusión.",
         "Anexo D – Monitoreo de proyectos."
       ],
-      "correcta": "B"
+      "correcta": 2
     },
     {
       "categoria": "Difusión y divulgación",
@@ -742,7 +742,7 @@
         "Difusión científica.",
         "Divulgación científica."
       ],
-      "correcta": "C"
+      "correcta": 3
     },
     {
       "categoria": "Incentivos económicos",
@@ -752,7 +752,7 @@
         "USD 1.200.",
         "USD 1.000."
       ],
-      "correcta": "A"
+      "correcta": 1
     },
     {
       "categoria": "Incentivos económicos",
@@ -762,7 +762,7 @@
         "USD 1.200.",
         "USD 1.600."
       ],
-      "correcta": "B"
+      "correcta": 2
     },
     {
       "categoria": "Incentivos económicos",
@@ -772,7 +772,7 @@
         "USD 750.",
         "USD 900."
       ],
-      "correcta": "C"
+      "correcta": 3
     },
     {
       "categoria": "Incentivos económicos",
@@ -782,7 +782,7 @@
         "USD 750.",
         "USD 1.000."
       ],
-      "correcta": "A"
+      "correcta": 1
     },
     {
       "categoria": "Equipo DGID",
@@ -793,7 +793,7 @@
         "Caterina Tuci.",
         "Andrea Farfán."
       ],
-      "correcta": "D"
+      "correcta": 4
     },
     {
       "categoria": "Reglamento de Investigación",
@@ -803,7 +803,7 @@
         "Iniciar las actividades y solicitar el reconocimiento institucional cuando finalice el proyecto.",
         "Registrar únicamente los resultados de la investigación, sin necesidad de autorización previa."
       ],
-      "correcta": "A"
+      "correcta": 1
     },
     {
       "categoria": "Reglamento de Investigación",
@@ -813,7 +813,7 @@
         "Gestionar la propuesta a través de la DGID, instancia encargada de solicitar la autorización institucional correspondiente.",
         "Solicitar autorización únicamente al coordinador de investigación de tu facultad y enviar la propuesta."
       ],
-      "correcta": "B"
+      "correcta": 2
     },
     {
       "categoria": "Reglamento de Investigación",
@@ -823,7 +823,7 @@
         "Esperar a que la revista científica notifique directamente a la DGID sobre la publicación.",
         "Enviar la información y los documentos necesarios para registrar el producto académico en los instrumentos institucionales correspondientes."
       ],
-      "correcta": "C"
+      "correcta": 3
     },
     {
       "categoria": "Reglamento de Investigación",
@@ -833,7 +833,7 @@
         "Realizar el pago directamente y solicitar su reconocimiento sin autorización institucional.",
         "Solicitar que los integrantes paguen la membresía y registrar posteriormente el gasto como institucional."
       ],
-      "correcta": "A"
+      "correcta": 1
     },
     {
       "categoria": "Reglamento de Investigación",
@@ -843,7 +843,7 @@
         "Gestionar el proceso a través del Centro de Transferencia Tecnológica (CTT), conforme a las disposiciones institucionales.",
         "Compartir libremente los resultados con cualquier empresa y formalizar después los acuerdos."
       ],
-      "correcta": "B"
+      "correcta": 2
     },
     {
       "categoria": "Reglamento de Investigación",
@@ -853,7 +853,7 @@
         "Que los estudiantes solo pueden incorporarse cuando el proyecto haya finalizado.",
         "Que los proyectos de investigación deben incluir estudiantes de la institución, de acuerdo con las actividades y objetivos del programa al que estén inscritos."
       ],
-      "correcta": "C"
+      "correcta": 3
     },
     {
       "categoria": "Reglamento de Investigación",
@@ -863,7 +863,7 @@
         "Cinco docentes investigadores.",
         "Dos docentes investigadores."
       ],
-      "correcta": "A"
+      "correcta": 1
     },
     {
       "categoria": "Reglamento de Investigación",
@@ -873,7 +873,7 @@
         "Incluyendo la filiación institucional de la Universidad Internacional del Ecuador (UIDE), en español o inglés, y verificando que esté correctamente registrada.",
         "Con el nombre de la institución donde se encuentra la revista."
       ],
-      "correcta": "B"
+      "correcta": 2
     },
     {
       "categoria": "Reglamento de Investigación",
@@ -883,7 +883,7 @@
         "Puedes ser Investigador Principal de todos los proyectos que desees, sin ninguna restricción.",
         "Puedes participar como investigador principal en un proyecto de investigación; la participación en otros proyectos se determina según las bases correspondientes."
       ],
-      "correcta": "C"
+      "correcta": 3
     },
     {
       "categoria": "Reglamento de Investigación",
@@ -893,7 +893,7 @@
         "Que el tema sea de interés personal, independientemente de las líneas de investigación institucionales.",
         "Que el proyecto pertenezca obligatoriamente a todas las líneas de investigación de la universidad."
       ],
-      "correcta": "A"
+      "correcta": 1
     },
     {
       "categoria": "Ronda divertida",
@@ -903,7 +903,7 @@
         "Es el horóscopo del investigador: te dice si este mes te aceptan el paper o Mercurio retrógrado te manda a revisión.",
         "Es un código secreto que, si lo dices tres veces frente al computador, hace que Scopus te indexe automáticamente."
       ],
-      "correcta": "A"
+      "correcta": 1
     },
     {
       "categoria": "Ronda divertida",
@@ -913,7 +913,7 @@
         "Divulgación científica.",
         "Una estrategia para que su mamá deje de preguntar: «¿Y tú exactamente qué haces en la universidad?»."
       ],
-      "correcta": "B"
+      "correcta": 2
     },
     {
       "categoria": "Ronda divertida",
@@ -923,7 +923,7 @@
         "Un grupo de apoyo emocional llamado «Revisor 2, danos una oportunidad».",
         "Colaboración científica entre investigadores e instituciones."
       ],
-      "correcta": "C"
+      "correcta": 3
     },
     {
       "categoria": "Ronda divertida",
@@ -933,7 +933,7 @@
         "Que también cuenta como producción académica sobrevivir a cinco reuniones seguidas sin que se acabe el café.",
         "Que si subes una selfie con bata y escribes «haciendo ciencia», automáticamente te asignan un DOI."
       ],
-      "correcta": "A"
+      "correcta": 1
     },
     {
       "categoria": "Ronda divertida",
@@ -943,7 +943,7 @@
         "El Investigador Principal.",
         "La persona que dice «hagamos una reunión cortita» y termina compartiendo 47 diapositivas."
       ],
-      "correcta": "B"
+      "correcta": 2
     },
     {
       "categoria": "Ronda divertida",
@@ -953,7 +953,7 @@
         "La abuelita del investigador, que lleva 40 años protegiendo su receta de seco de pollo sin necesidad de patente.",
         "El Centro de Transferencia Tecnológica (CTT), de acuerdo con el procedimiento institucional."
       ],
-      "correcta": "C"
+      "correcta": 3
     },
     {
       "categoria": "Ronda divertida",
@@ -963,7 +963,7 @@
         "Intentando conseguir que su paper tenga más visualizaciones que el video del gato que se cayó de la mesa.",
         "Lanzando su carrera de influencer académico con el eslogan «Dale like, comparte y cítame en APA 7»."
       ],
-      "correcta": "A"
+      "correcta": 1
     },
     {
       "categoria": "Ronda divertida",
@@ -973,7 +973,7 @@
         "La internacionalización de la investigación.",
         "Un club de acumulación de millas, donde el verdadero objetivo es conseguir categoría Gold antes que un artículo Q1."
       ],
-      "correcta": "B"
+      "correcta": 2
     },
     {
       "categoria": "Ronda divertida",
@@ -983,7 +983,7 @@
         "Investigación de resistencia extrema para comprobar cuántas veces se puede cambiar el título de una tesis antes de perder la paciencia.",
         "Investigación formativa, articulada con el proceso de formación académica del estudiante."
       ],
-      "correcta": "C"
+      "correcta": 3
     },
     {
       "categoria": "Ronda divertida",
@@ -993,7 +993,7 @@
         "Crear un grupo de WhatsApp llamado «Vamos a cambiar el mundo» y archivarlo después de la primera reunión.",
         "Imprimir el informe de 200 páginas y dejarlo sobre una mesa, esperando que la sociedad lo encuentre por intervención divina."
       ],
-      "correcta": "A"
+      "correcta": 1
     }
   ]
 }

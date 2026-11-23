@@ -19,8 +19,8 @@ import { currentQuestion, deadline, potAt, reducer, type Action, type GameState 
 import { confettiWin, desertRoll, emojiBurst, pointsFly } from "@/lib/effects";
 import { points, seconds } from "@/lib/format";
 import { toggleFullscreen, useCountUp, useFitScale, useFrameNow, useIdle, ZOOM } from "@/lib/hooks";
-import { keyLabel } from "@/lib/keys";
-import { optionLetter } from "@/lib/questions";
+import { keyLabel, zeroPicksOption } from "@/lib/keys";
+import { optionLabel } from "@/lib/questions";
 import { isMuted, setMuted, sfx } from "@/lib/sound";
 import { saveGame, savePrefs } from "@/lib/storage";
 import { teamPalette, teamVars, type Theme } from "@/lib/theme";
@@ -83,6 +83,15 @@ export default function Game({ initial, theme, zoom, onZoom, onExit, onReplay, o
   // Guarda la partida al empezar y terminar cada pregunta, por si se recarga la página.
   useEffect(() => {
     saveGame(stateRef.current);
+  }, [state.phase, state.index]);
+
+  // Con 10 opciones sobre la mesa, el 0 elige la décima en vez de restablecer el zoom.
+  useEffect(() => {
+    const s = stateRef.current;
+    zeroPicksOption.current = s.phase === "answering" && currentQuestion(s).options.length >= 10;
+    return () => {
+      zeroPicksOption.current = false;
+    };
   }, [state.phase, state.index]);
 
   // Fin de tiempo: un único temporizador apuntado al instante exacto en que vence el reloj.
@@ -177,10 +186,16 @@ export default function Game({ initial, theme, zoom, onZoom, onExit, onReplay, o
         dispatch({ type: "BUZZ", team, now });
         return;
       }
-      const digit = /^(Digit|Numpad)([1-6])$/.exec(e.code);
+      // 1–9 eligen la opción; el 0, la décima.
+      const digit = /^(Digit|Numpad)([0-9])$/.exec(e.code);
       if (digit) {
-        dispatch({ type: "PICK", option: Number(digit[2]) - 1, now });
-        return;
+        const n = digit[2] === "0" ? 10 : Number(digit[2]);
+        if (n <= currentQuestion(s).options.length) {
+          e.preventDefault();
+          dispatch({ type: "PICK", option: n - 1, now });
+          return;
+        }
+        if (digit[2] !== "0") return;
       }
       switch (e.code) {
         case "Space":
@@ -546,7 +561,9 @@ function Options({ state, long, onPick }: { state: GameState; long: boolean; onP
   // es más fácil si todas se ven igual.
   const textSize = long ? "body-large" : "title-large";
   return (
-    <ol className={`options${q.options.length > 4 ? " six" : ""}${long ? " long" : ""}`}>
+    <ol
+      className={`options${q.options.length > 6 ? " many" : q.options.length > 4 ? " six" : ""}${long ? " long" : ""}`}
+    >
       {q.options.map((opt, i) => {
         const out = eliminated.includes(i);
         const right = reveal && i === q.correct;
@@ -564,7 +581,7 @@ function Options({ state, long, onPick }: { state: GameState; long: boolean; onP
                 onPick(i);
               }}
             >
-              <span className="option-letter title-medium emphasized">{optionLetter(i)}</span>
+              <span className="option-number title-medium emphasized">{optionLabel(i)}</span>
               <span className={`option-text ${textSize}`}>{opt}</span>
               {right && <Icon name="check_circle" filled className="option-end" />}
               {out && <Icon name="cancel" className="option-end" />}
@@ -628,7 +645,7 @@ function Toolbar(props: {
     <nav className="toolbar" aria-label="Controles del moderador">
       {phase === "ready" && btn("play_arrow", "Lanzar (Espacio)", () => act("LAUNCH"), { filled: true })}
       {phase === "result" && btn("skip_next", "Siguiente (Espacio)", () => act("NEXT"), { filled: true })}
-      {phase === "answering" && btn("check", props.hasOptions ? "Correcta (C o 1–6)" : "Correcta (C)", () => act("JUDGE", { correct: true }))}
+      {phase === "answering" && btn("check", props.hasOptions ? "Correcta (C o el número)" : "Correcta (C)", () => act("JUDGE", { correct: true }))}
       {phase === "answering" && btn("close", "Incorrecta (X)", () => act("JUDGE", { correct: false }))}
       {(phase === "open" || phase === "answering") &&
         btn(props.paused ? "play_arrow" : "pause", props.paused ? "Continuar (P)" : "Pausa (P)", () => act("PAUSE"))}

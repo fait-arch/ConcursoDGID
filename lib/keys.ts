@@ -2,11 +2,18 @@
 export const RESERVED_KEYS = new Set<string>([
   "Space", "Enter", "Escape", "Tab",
   "KeyC", "KeyX", "KeyZ", "KeyP", "KeyS", "KeyM", "KeyF", "KeyH", "KeyT",
-  // Zoom de la interfaz: − / + / 0. Se reservan las variantes de los teclados
-  // español e inglés y las del teclado numérico.
-  "Minus", "Slash", "NumpadSubtract", "Equal", "BracketRight", "NumpadAdd", "Digit0", "Numpad0",
-  ...[1, 2, 3, 4, 5, 6].flatMap((n) => [`Digit${n}`, `Numpad${n}`]),
+  // Zoom de la interfaz: − / +. Se reservan las variantes de los teclados
+  // español e inglés y las del teclado numérico; el 0 va con los números.
+  "Minus", "Slash", "NumpadSubtract", "Equal", "BracketRight", "NumpadAdd",
+  // Números 1–9 y 0: eligen la opción que respondió el equipo (0 = la décima).
+  ...[0, 1, 2, 3, 4, 5, 6, 7, 8, 9].flatMap((n) => [`Digit${n}`, `Numpad${n}`]),
 ]);
+
+/**
+ * Cierto mientras una pregunta de 10 opciones espera veredicto: entonces el 0 elige
+ * la décima opción y no restablece el tamaño de la interfaz.
+ */
+export const zeroPicksOption = { current: false };
 
 const ALIASES: Record<string, string> = {
   "shift": "ShiftLeft",

@@ -6,6 +6,7 @@ import Setup from "./Setup";
 import { createGame, type GameState } from "@/lib/game";
 import { prepareQuestions, selectRound } from "@/lib/questions";
 import { clampZoom, ZOOM } from "@/lib/hooks";
+import { zeroPicksOption } from "@/lib/keys";
 import { setMuted } from "@/lib/sound";
 import {
   clearSavedGame,
@@ -58,6 +59,8 @@ export default function App() {
       const inn = e.code === "Equal" || e.code === "BracketRight" || e.code === "NumpadAdd";
       const reset = e.code === "Digit0" || e.code === "Numpad0";
       if (!out && !inn && !reset) return;
+      // Con 10 opciones en juego, el 0 es el veredicto de la décima.
+      if (reset && zeroPicksOption.current) return;
       // Mientras se escribe en un campo, solo con Ctrl o ⌘: el guion sigue sirviendo para escribir.
       const el = document.activeElement;
       const typing = el instanceof HTMLInputElement || el instanceof HTMLTextAreaElement;

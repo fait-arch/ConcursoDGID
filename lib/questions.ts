@@ -7,7 +7,7 @@ export const DEFAULT_SETTINGS: Settings = {
   points: 100,
   minFactor: 0.5,
   reboundFactor: 1,
-  shuffle: false,
+  shuffle: true,
   perRound: 5,
 };
 
@@ -20,7 +20,11 @@ export const TEAM_COLORS = [
   "#FF5A4A", "#FF9F1C", "#F2C230", "#2FC28E", "#22B8CF", "#3F8CFF", "#8B6CFF", "#F15BB5",
 ];
 
-const LETTERS = "ABCDEF";
+/** Opciones por pregunta: se numeran del 1 al 10. */
+export const MAX_OPTIONS = 10;
+
+/** Solo para leer archivos antiguos que marcaban la correcta con una letra. */
+const LETTERS = "ABCDEFGHIJ";
 
 type Obj = Record<string, unknown>;
 const isObj = (v: unknown): v is Obj => typeof v === "object" && v !== null && !Array.isArray(v);
@@ -58,11 +62,11 @@ function resolveCorrect(value: unknown, options: string[], where: string, errors
   }
   if (typeof value === "number") {
     if (Number.isInteger(value) && value >= 1 && value <= options.length) return value - 1;
-    errors.push(`${where}: "correcta" debe ser una letra (A–${LETTERS[options.length - 1]}), el número de la opción (1–${options.length}) o su texto exacto.`);
+    errors.push(`${where}: "correcta" debe ser el número de la opción (1–${options.length}) o su texto exacto.`);
     return -1;
   }
   const s = String(value).trim();
-  if (/^[a-f]$/i.test(s)) {
+  if (/^[a-j]$/i.test(s)) {
     const i = LETTERS.indexOf(s.toUpperCase());
     if (i < options.length) return i;
   }
@@ -96,8 +100,8 @@ function parseQuestion(raw: unknown, i: number, errors: string[]): RawQuestion |
       return null;
     }
     options = rawOptions.map((o) => str(o) ?? "").filter(Boolean);
-    if (options.length === 1 || options.length > 6) {
-      errors.push(`${where}: debe tener entre 2 y 6 opciones (tiene ${options.length}).`);
+    if (options.length === 1 || options.length > MAX_OPTIONS) {
+      errors.push(`${where}: debe tener entre 2 y ${MAX_OPTIONS} opciones (tiene ${options.length}).`);
       return null;
     }
   }
@@ -149,7 +153,7 @@ export function parseQuestionFile(text: string, source: string): QuestionFile {
     points: num(pick(cfg, "puntos"), 1, 100000) ?? DEFAULT_SETTINGS.points,
     minFactor: fraction(pick(cfg, "puntosMinimos", "puntosMínimos")) ?? DEFAULT_SETTINGS.minFactor,
     reboundFactor: fraction(pick(cfg, "factorRebote")) ?? DEFAULT_SETTINGS.reboundFactor,
-    shuffle: pick(cfg, "mezclar") === true,
+    shuffle: typeof pick(cfg, "mezclar") === "boolean" ? (pick(cfg, "mezclar") as boolean) : DEFAULT_SETTINGS.shuffle,
     perRound: Math.round(
       num(pick(cfg, "preguntasPorRonda", "preguntasRonda", "porRonda"), 0, 100000) ?? DEFAULT_SETTINGS.perRound,
     ),
@@ -266,4 +270,5 @@ export function selectRound(raw: RawQuestion[], s: Settings, used: string[] = []
   };
 }
 
-export const optionLetter = (i: number) => LETTERS[i] ?? String(i + 1);
+/** Las opciones se presentan numeradas: 1, 2, 3… y 10 en la décima. */
+export const optionLabel = (i: number) => String(i + 1);

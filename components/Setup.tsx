@@ -42,7 +42,7 @@ function keyProblem(teams: Team[], i: number): string | null {
 
 const MODERATOR_KEYS: [string[], string][] = [
   [["Espacio"], "Lanzar la pregunta y pasar a la siguiente"],
-  [["1", "6"], "Opción que respondió el equipo (se corrige sola)"],
+  [["1", "9"], "Opción que respondió el equipo, y 0 la décima (se corrige sola)"],
   [["C", "X"], "Respuesta correcta o incorrecta"],
   [["Z"], "Deshacer el último paso"],
   [["P"], "Pausar o continuar el reloj"],
@@ -482,7 +482,7 @@ export default function Setup({ theme, onStart, onResume, onToggleTheme }: Props
                   <dt className="label-large">
                     {keys.length === 2 && keys[0] === "1" ? (
                       <>
-                        <kbd>1</kbd>–<kbd>6</kbd>
+                        <kbd>{keys[0]}</kbd>–<kbd>{keys[1]}</kbd>
                       </>
                     ) : (
                       keys.map((k, j) => (

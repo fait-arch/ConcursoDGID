@@ -1011,6 +1011,11 @@ kbd {
 .options.six {
   grid-template-columns: 1fr 1fr 1fr;
 }
+/* De 7 a 10 opciones: dos columnas anchas; el texto se encoge solo para caber. */
+.options.many {
+  grid-template-columns: 1fr 1fr;
+  width: min(100%, calc(880 * var(--dp-base)));
+}
 /* Enunciados u opciones largos: una sola columna a todo el ancho. Necesita menos
    alto que dos columnas estrechas y se lee bastante mejor. */
 .fit.long .question {
@@ -1024,7 +1029,7 @@ kbd {
 .options.long .option {
   align-items: flex-start;
 }
-.options.long .option-letter {
+.options.long .option-number {
   margin-top: calc(2 * var(--dp));
 }
 .options.long .option-text {
@@ -1050,6 +1055,18 @@ kbd {
 .options li:nth-child(6) {
   animation-delay: 200ms;
 }
+.options li:nth-child(7) {
+  animation-delay: 240ms;
+}
+.options li:nth-child(8) {
+  animation-delay: 280ms;
+}
+.options li:nth-child(9) {
+  animation-delay: 320ms;
+}
+.options li:nth-child(10) {
+  animation-delay: 360ms;
+}
 .option {
   flex: 1;
   display: flex;
@@ -1070,7 +1087,7 @@ kbd {
 .option:disabled {
   cursor: default;
 }
-.option-letter {
+.option-number {
   display: grid;
   place-items: center;
   width: calc(40 * var(--dp));
@@ -1103,7 +1120,7 @@ kbd {
   color: var(--win-on);
   transform: scale(1.03);
 }
-.option.right.won .option-letter {
+.option.right.won .option-number {
   background: var(--win-on);
   color: var(--win);
 }

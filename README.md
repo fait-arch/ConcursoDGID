@@ -84,11 +84,11 @@ La interfaz sigue Material Design 3, el sistema de diseño de Google:
 
 ## Cómo se juega
 
-1. **Configuración.** Elige cuántas **preguntas por ronda** (5 por defecto): se sacan al azar del archivo y la ronda siguiente trae otras distintas, sin repetir ninguna hasta agotarlas. Revisa nombres, colores y pulsadores. Pulsa la tecla de cada equipo para probarla: su mitad de la pantalla se ilumina. «Cambiar pulsador» acepta cualquier tecla, incluidos los pulsadores USB que se presentan como teclado.
+1. **Configuración.** Elige cuántas **preguntas por ronda** (5 por defecto): se sacan al azar del archivo y la ronda siguiente trae otras distintas, sin repetir ninguna hasta agotarlas. «Mezclar preguntas» viene activado, así que además salen desordenadas. Revisa nombres, colores y pulsadores. Pulsa la tecla de cada equipo para probarla: su mitad de la pantalla se ilumina. «Cambiar pulsador» acepta cualquier tecla, incluidos los pulsadores USB que se presentan como teclado.
 2. **Pregunta.** Aparece el número de pregunta; el moderador pulsa **Espacio** para lanzarla. Empieza la cuenta atrás y los pulsadores se activan.
 3. **Pulsación.** El primer equipo que pulsa bloquea al rival y la pantalla se llena de su color. El bote de puntos se congela en ese instante: cuanto antes se pulsa, más vale (del 100 % al mínimo configurado).
 4. **Veredicto.**
-   - Preguntas con opciones: el moderador pulsa **1–6** con la opción que dijo el equipo y el sistema la corrige solo.
+   - Preguntas con opciones: el moderador pulsa el **número** de la opción que dijo el equipo (**1**–**9**, y **0** para la décima) y el sistema la corrige solo.
    - Preguntas abiertas: **C** si es correcta, **X** si no.
 5. **Resultados.**
    - **Acierto:** el equipo suma el bote (confeti en su color).
@@ -131,7 +131,7 @@ Está en la raíz del proyecto y se vuelve a leer cada vez que se abre la pantal
     "puntos": 100,
     "puntosMinimos": 0.5,
     "factorRebote": 1,
-    "mezclar": false,
+    "mezclar": true,
     "preguntasPorRonda": 5
   },
   "equipos": [
@@ -143,7 +143,7 @@ Está en la raíz del proyecto y se vuelve a leer cada vez que se abre la pantal
       "categoria": "Historia",
       "pregunta": "¿En qué año llegó el ser humano a la Luna?",
       "opciones": ["1965", "1969", "1972", "1959"],
-      "correcta": "B"
+      "correcta": 2
     },
     {
       "categoria": "Ciencia",
@@ -165,18 +165,18 @@ Está en la raíz del proyecto y se vuelve a leer cada vez que se abre la pantal
 | `puntos` | Puntos máximos de cada pregunta | 100 |
 | `puntosMinimos` | Parte de los puntos garantizada aunque se pulse al final (0,5 = 50 %) | 0.5 |
 | `factorRebote` | Parte del bote que gana quien acierta en el rebote (1 = todo) | 1 |
-| `mezclar` | Barajar el orden de las preguntas dentro de la ronda | false |
+| `mezclar` | Barajar el orden de las preguntas dentro de la ronda | true |
 | `preguntasPorRonda` | Cuántas preguntas se juegan en cada ronda, elegidas al azar (`0` = todas) | 5 |
 
-**Equipos** (opcional): `nombre`, `color` en hexadecimal y `tecla`. La tecla puede ser una letra o número (`"A"`, `"7"`) o un código de teclado como `"ShiftLeft"` o `"ShiftRight"`. No se pueden usar las del moderador: Espacio, Enter, C, X, Z, P, S, M, F, H, T, 1–6 ni las del zoom (− + 0).
+**Equipos** (opcional): `nombre`, `color` en hexadecimal y `tecla`. La tecla puede ser una letra (`"A"`) o un código de teclado como `"ShiftLeft"` o `"ShiftRight"`. No se pueden usar las del moderador: Espacio, Enter, C, X, Z, P, S, M, F, H, T, los números 0–9 ni las del zoom (− +).
 
 **Preguntas**
 
 | Campo | Obligatorio | Notas |
 | --- | --- | --- |
 | `pregunta` | Sí | Texto que se proyecta. Si es largo, se encoge solo para caber entero |
-| `opciones` | No | De 2 a 6 opciones. Sin opciones, la pregunta es abierta |
-| `correcta` | Con opciones | Letra (`"B"`), número de la opción empezando en 1 (`2`) o el texto exacto (`"1969"`) |
+| `opciones` | No | De 2 a 10 opciones, numeradas del 1 al 10 en pantalla. Sin opciones, la pregunta es abierta |
+| `correcta` | Con opciones | Número de la opción empezando en 1 (`2`) o su texto exacto (`"1969"`). También se admite la letra (`"B"`) de archivos antiguos |
 | `respuesta` | Sin opciones | Se muestra al cerrar la pregunta |
 | `categoria` | No | Aparece antes de lanzar la pregunta |
 | `puntos`, `tiempoPulsar`, `tiempoResponder` | No | Sustituyen a la configuración general solo en esa pregunta |
