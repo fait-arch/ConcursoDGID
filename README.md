@@ -59,10 +59,19 @@ npx vercel --prod   # despliegue definitivo
 ### Qué cambia respecto a jugar en local
 
 - **Las preguntas viajan dentro del despliegue.** `preguntas.json` se empaqueta con la aplicación, así que para cambiarlas hay que volver a desplegar. «Volver a leer» ya no recoge ediciones del archivo. Lo que sí funciona igual es **«Abrir otro archivo»**: carga un JSON desde el equipo, se lee en el navegador y sirve para una partida puntual sin tocar el despliegue.
-- **La página queda pública.** Cualquiera con la dirección puede abrirla. Si no quieres eso, en Vercel: *Settings → Deployment Protection → Vercel Authentication*.
+- **Por defecto la página pide iniciar sesión en Vercel.** Los proyectos dentro de un equipo llevan activada la *Vercel Authentication*, así que quien abra la dirección sin pertenecer al equipo verá un muro de acceso. Para que entre cualquiera: *Settings → Deployment Protection → Vercel Authentication → Disabled*, y guarda. Si prefieres dejarla restringida, ábrela tú desde la sesión del equipo.
 - **Los pulsadores siguen siendo teclas de ese equipo**, igual que en local: la página no se juega entre varios dispositivos, se proyecta desde uno solo.
 
-Si cambias `preguntas.json` y la página desplegada sigue mostrando las preguntas antiguas, es que falta el despliegue nuevo: haz `git push` y espera a que Vercel termine.
+### Si algo no sale
+
+- **«No Production Deployment. Your Production Domain is not serving traffic.»** El proyecto está creado pero nunca se construyó: importarlo no despliega solo. Entra en la pestaña *Deployments* del proyecto y pulsa **Deploy**, o fuerza uno desde la terminal:
+
+  ```bash
+  git commit --allow-empty -m "Desplegar"
+  git push
+  ```
+
+- **Cambiaste `preguntas.json` y la página sigue mostrando las antiguas.** Falta el despliegue nuevo: haz `git push` y espera a que Vercel termine.
 
 ## Diseño
 
